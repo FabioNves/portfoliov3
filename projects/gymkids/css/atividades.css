@@ -1,0 +1,254 @@
+
+.atividadesFull{
+    margin: 0 5rem;
+    padding-top: 5rem;
+}
+
+.atividadesFull h1{
+    text-align: center;
+    margin: 2rem 0;
+}
+.atividadesFull p{
+    text-align: center;
+    padding: 0 10rem;
+    line-height: 1.75rem;
+}
+
+
+.contentorTabs{
+    margin-top: 2.5rem;
+    padding: 0 10rem;
+}
+/** Accordion button **/ 
+.accordion {
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border-radius: .5rem;
+    outline: none;
+    transition: 0.4s;
+    margin-top: 2rem;
+} 
+
+.accordion img{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+.accordion h2{
+    padding-top: 0;
+}
+.accordion .pushtoOpen{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+}
+.accordion .pushtoOpen a{
+    text-decoration: none;
+    color: white;
+    padding: .5rem 1.5rem;
+    border: .1rem solid white;
+    border-radius: .2rem;
+}
+
+/****** 1st button *******/
+#btn1{
+    border: .2rem solid var(--blue);
+}
+#btn1:hover{
+    border: .2rem solid var(--blue);
+    border-radius: .5rem;
+}
+
+#btn1:hover a{
+    background-color: #fff;
+    color: var(--blue);
+    border: .1rem solid var(--blue);
+}
+
+#btn1, .active{
+    background-color: var(--blue);
+}
+/****** 2nd button *******/
+#btn2{
+    border: .2rem solid var(--orange);
+    background-color: var(--orange);
+}
+
+#btn2:hover{
+    border: .2rem solid var(--orange);
+    border-radius: .5rem;
+}
+
+#btn2:hover a{
+    background-color: #fff;
+    color: var(--orange);
+    border: .1rem solid var(--orange);
+}
+
+#btn2, .active{
+    background-color: var(--orange);
+}
+
+/****** 3rd button *******/
+
+#btn3{
+    border: .2rem solid var(--green);
+    background-color: var(--green);
+}
+
+#btn3:hover{
+    border: .2rem solid var(--green);
+    border-radius: .5rem;
+}
+
+#btn3:hover a{
+    background-color: white;
+    color: var(--green);
+    border: .1rem solid var(--green);
+}
+#btn3, .active{
+    background-color: var(--green);
+}
+/***** Panel ****/ 
+
+.panel{
+    padding: 0 1rem;
+    background-color: white;
+    color: #003366;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-top: -0.5rem;
+    border: .2rem solid #0066CC;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.panel .panelSeccao1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.panel .panelSeccao1 .img{
+    flex: 1;
+}
+.panel .panelSeccao1 .img img{
+    width: 100%;
+    border-radius: .2rem;
+}
+.panel .panelSeccao1 .text{
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.5rem;
+}
+.panel .panelSeccao1 .text h2{
+    margin: 1rem 0;
+}
+.panel .panelSeccao1 .text p{
+    text-align: left;
+    padding: 0;
+}
+
+/*** Seccao 2 ***/
+
+.panel .panelSeccao2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.panel .panelSeccao2 .img{
+    flex: 1;
+}
+.panel .panelSeccao2 .img img{
+    width: 100%;
+    border-radius: .2rem;
+}
+.panel .panelSeccao2 .text{
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+.panel .panelSeccao2 .text h2{
+    margin: 1rem 0;
+}
+.panel .panelSeccao2 .text p{
+    text-align: left;
+    padding: 0;
+}
+
+#panel1{
+    border: .2rem solid var(--blue);
+}
+#panel2{
+    border: .2rem solid var(--orange);
+}
+#panel3{
+    border: .2rem solid var(--green);
+}
+@media only screen and (max-width: 1200px){
+    .atividadesFull{
+        margin: 0 2rem;
+    }
+    .atividadesFull h1{
+        text-align: left;
+        padding: 0 5rem;
+    }
+    .atividadesFull p{
+        text-align: left;
+        padding: 0 5rem;
+        line-height: 1.75rem;
+    }
+    .contentorTabs{
+        padding: 0 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .atividadesFull p{
+        text-align: left;
+        padding: 0;
+    }
+    .atividadesFull{
+        margin: 0 2rem;
+    }
+    .atividadesFull h1{
+        padding: 0;
+        text-align: left;
+    }
+
+    .contentorTabs{
+        padding: 0 .5rem;
+    }
+
+    .accordion .pushtoOpen{
+        flex-direction: column;
+    }
+    .accordion .pushtoOpen a{
+        margin: 1.5rem 0;
+    }
+
+    /***** Panel ****/ 
+
+    .panel{
+        padding: 0 .2rem;
+    }
+    .panelSeccao1, .panelSeccao2{
+        flex-direction: column;
+    }
+
+    .panelSeccao1 .text{
+        padding: .2rem;
+    }
+}
+

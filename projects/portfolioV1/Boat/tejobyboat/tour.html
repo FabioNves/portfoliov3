@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="fa/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="jquery.nice-number.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="jquery.nice-number.js"></script>
+    <script type="text/javascript">
+        $(function(){
+             $('input[type="number"]').niceNumber();
+        });
+    </script>
+    <title>Tour</title>
+</head>
+<body>
+        <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <label class="logo"><a href="index.html"><img src="img/Tejobyboat.png"></a></label>
+                <ul>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a class="active" href="boats.html">Boats</a></li>
+                </ul>
+        </nav>
+        <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="img/95.jpg"></div>
+                          <div class="swiper-slide"><img src="img/foto.jpg"></div>
+                          <div class="swiper-slide"><img src="img/unnamed.jpg"></div>
+                          <div class="swiper-slide"><img src="img/95.jpg"></div>
+                          <div class="swiper-slide"><img src="img/foto.jpg"></div>
+                        </div>
+                        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        </div>
+        <div class="leftRight">
+        <div class="up">
+        <div class="tourTitulo">
+            <h1>Tour Title</h1>
+        
+            <div class="tourIcons">
+                <div class="iconz">
+                        <span class="duration"><img src="icon/ampulheta.png"><p>2 Hours</p></span>
+                        <span class="type"><img src="icon/etiqueta.png"><p>Privet tour</p></span>
+                        <span class="person"><img src="icon/people.png"><p>2/4 Persons</p></span>
+                   </div>
+            </div>
+        </div>
+        <div class="descricao">
+                        <h2>Description</h2>
+                        <span class="blueLine"></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                   
+                    <div class="itinerario">
+                        <h2>Itinerario</h2>
+                        <ul>
+                            <li>1 - Praça do Comércio</li>
+                            <li>2 - Rio tejo</li>
+                            <li>3 - Belém</li>
+                        </ul>
+                    </div>
+                </div>
+        <div class="book">
+            <div class="box">
+                <h2>Price</h2>
+                <h3>70€ / Person</h3>
+        </div>
+                <div class="calendar">
+                            <h2>Setembro | 2020</h2>
+                        <div class="date">
+                            <div class="day">S</div>
+                            <div class="day">M</div>
+                            <div class="day">T</div>
+                            <div class="day">W</div>
+                            <div class="day">T</div>
+                            <div class="day">F</div>
+                            <div class="day">S</div>
+                
+                            <div class="number"></div>
+                            <div class="number"></div>
+                            <div class="number">1</div>
+                            <div class="number">2</div>
+                            <div class="number">3</div>
+                            <div class="number">4</div>
+                            <div class="number">5</div>
+                            <div class="number">6</div>
+                            <div class="number">7</div>
+                            <div class="number">8</div>
+                            <div class="number">9</div>
+                            <div class="number">10</div>
+                            <div class="number">11</div>
+                            <div class="number">12</div>
+                            <div class="number">13</div>
+                            <div class="number">14</div>
+                            <div class="number">15</div>
+                            <div class="number">16</div>
+                            <div class="number">17</div>
+                            <div class="number">18</div>
+                            <div class="number">19</div>
+                            <div class="number">20</div>
+                            <div class="number">21</div>
+                            <div class="number">22</div>
+                            <div class="number">23</div>
+                            <div class="number">24</div>
+                            <div class="number">25</div>
+                            <div class="number">26</div>
+                            <div class="number">27</div>
+                            <div class="number">28</div>
+                            <div class="number">29</div>
+                            <div class="number">30</div>
+                        </div>
+                    </div>
+                    <div class="personX">
+                    <div class="numbers">
+                            <h2>Adults</h2>
+                        <input type="number" min="0" value="1">
+                    </div>
+                    <div class="numbers">
+                                <h2>Kids</h2>
+                            <input type="number" min="0" value="1">
+                        </div>
+                </div>
+                <div class="bookNow">
+                        <a href="#">Book Now!</a>
+                </div>
+        </div>
+</div>
+</div>
+        <div class="localizacao">
+            <h2>Localization</h2>
+            <span></span>
+            <img src="img/maps.png" alt="">
+        </div>
+        <div class="opiniao">
+            <h2 class="opiniaoTitle">Reviews</h2>
+            <div class="container" id="reviews">
+                    <div class="review">
+                        <div class="imgTitle">
+                                <div class="imagem"><img src="icon/person.jpg" alt=""></div>
+                                <div class="title">
+                                        <h2>Review Title</h2>
+                                        <div class="stars">
+                                            <img src="icon/estrela.png" alt="">
+                                            <img src="icon/estrela.png" alt="">
+                                            <img src="icon/estrela.png" alt="">
+                                            <img src="icon/estrela.png" alt="">
+                                            <img src="icon/estrela.png" alt="">
+                                        </div>
+                                </div>
+                        </div>
+                        <p class="reviewDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        <h4>Rita Pereira | TripAdvisor</h4>
+                    </div>
+                    <div class="review">
+                            <div class="imgTitle">
+                                    <div class="imagem"><img src="icon/person.jpg" alt=""></div>
+                                    <div class="title">
+                                            <h2>Review Title</h2>
+                                            <div class="stars">
+                                                <img src="icon/estrela.png" alt="">
+                                                <img src="icon/estrela.png" alt="">
+                                                <img src="icon/estrela.png" alt="">
+                                                <img src="icon/estrela.png" alt="">
+                                                <img src="icon/estrela.png" alt="">
+                                            </div>
+                                    </div>
+                            </div>
+                            <p class="reviewDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            <h4>Rita Pereira | TripAdvisor</h4>
+                        </div>
+                        <div class="review">
+                                <div class="imgTitle">
+                                        <div class="imagem"><img src="icon/person.jpg" alt=""></div>
+                                        <div class="title">
+                                                <h2>Review Title</h2>
+                                                <div class="stars">
+                                                    <img src="icon/estrela.png" alt="">
+                                                    <img src="icon/estrela.png" alt="">
+                                                    <img src="icon/estrela.png" alt="">
+                                                    <img src="icon/estrela.png" alt="">
+                                                    <img src="icon/estrela.png" alt="">
+                                                </div>
+                                        </div>
+                                </div>
+                                <p class="reviewDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                <h4>Rita Pereira | TripAdvisor</h4>
+                            </div>
+                </div>
+        </div>
+        <div class="related">
+            <h2 class="relatedTitle">Related Tours</h2>
+            <div class="container" id="tours">
+                    <div class="tour">
+                       <div class="imagem">
+                            <span class="price">Desde  <b>82€</b></span>
+                           <img src="img/95.jpg">
+                           <div class="tags">
+                                <span class="duration"><img src="icon/ampulheta.png"><p>2H</p></span>
+                                <span class="type"><img src="icon/etiqueta.png"><p>Tour Privado</p></span>
+                                <span class="person"><img src="icon/people.png"><p>2/4 Pessoas</p></span>
+                           </div>
+                        </div> 
+                        <h2 class="tourTitle">Tour de barco em Lisboa</h2>
+                        <p class="tourDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        <div class="btn"><a href="tour.html">Saber mais</a></div>
+                    </div>
+                    <div class="tour">
+                            <div class="imagem">
+                                 <span class="price">Desde  <b>82€</b></span>
+                                <img src="img/95.jpg">
+                                <div class="tags">
+                                     <span class="duration"><img src="icon/ampulheta.png"><p>2H</p></span>
+                                     <span class="type"><img src="icon/etiqueta.png"><p>Tour Privado</p></span>
+                                     <span class="person"><img src="icon/people.png"><p>2/4 Pessoas</p></span>
+                                </div>
+                             </div> 
+                             <h2 class="tourTitle">Tour de barco em Lisboa</h2>
+                             <p class="tourDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                             <div class="btn"><a href="tour.html">Saber mais</a></div>
+                    </div>
+                    <div class="tour">
+                            <div class="imagem">
+                                 <span class="price">Desde  <b>82€</b></span>
+                                <img src="img/95.jpg">
+                                <div class="tags">
+                                     <span class="duration"><img src="icon/ampulheta.png"><p>2H</p></span>
+                                     <span class="type"><img src="icon/etiqueta.png"><p>Tour Privado</p></span>
+                                     <span class="person"><img src="icon/people.png"><p>2/4 Pessoas</p></span>
+                                </div>
+                             </div> 
+                             <h2 class="tourTitle">Tour de barco em Lisboa</h2>
+                             <p class="tourDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                             <div class="btn"><a href="tour.html">Saber mais</a></div>
+                    </div>
+                </div>
+                <div class="mainBtn"><a href="tours.html">Ver todos</a></div>
+        </div>
+
+
+        <footer>
+                    <div class="footer">
+                        <div class="contacts">
+                             <h2>Contacts</h2>
+                            <div class="adress">Rua de Alfredo n3 1300-541 Lisboa</div>
+                            <div class="phone">936 000 000</div>
+                            <div class="email">email@email</div>
+                        </div>
+                        <div class="menu">
+                                <h2>Quick Links</h2>
+                                <div class="links">
+                                        <a href="tours.html">Tours</a>
+                            <a href="boats.html">Boats</a>
+                                </div> 
+                        </div>
+                        <div class="social">
+                                <h2>Follow us</h2>
+                                <div class="icons">
+                                        <img src="icon/facebook.png" alt="">
+                                        <img src="icon/logotipo.png" alt="">
+                                        <img src="icon/twitter.png" alt="">
+                                </div>
+                        </div>
+                    </div>
+                    <p>All rights reserved - 2020</p>
+        </footer>
+        <script>
+                        var swiper = new Swiper('.swiper-container', {
+                          slidesPerView: 'auto',
+                          spaceBetween: 0,
+                          autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+                          pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                          },
+                        });
+        </script>
+</body>
+</html>

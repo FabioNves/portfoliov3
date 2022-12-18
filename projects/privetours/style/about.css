@@ -1,0 +1,113 @@
+:root{
+    --darkBlue: #183147;
+    --blue: #2F93EB;
+    --lightBlue: #E4EAF0;
+    --orange: #EBA22F;
+}
+
+.about{
+    margin: 0;
+}
+
+.section1{
+    display: flex;
+    padding: 2rem;
+}
+.section1Text{
+    flex: 1;
+    padding: 2rem;
+}
+.section1 h1{
+    margin-bottom: 1rem;
+}
+.section1Text span{
+    width: 15rem;
+    height: 2rem;
+    position: absolute;
+    left: 0;
+    margin-top: -2rem;
+    background-color: var(--lightBlue);
+    z-index: -1;
+}
+.section1Text p{
+    text-align: justify;
+    padding: 1rem 0;
+}
+.section1Image{
+    flex: 1;
+}
+.section1Image img{
+    width: 100%;
+}
+
+.section2{
+    display: flex;
+    padding: 2rem;
+}
+.section2Text{
+    flex: 1;
+    padding: 2rem;
+}
+.section2 h1{
+    text-align: right;
+    margin-bottom: 1rem;
+}
+.section2Text span{
+    width: 20rem;
+    height: 2rem;
+    position: absolute;
+    right: 0;
+    margin-top: -2rem;
+    background-color: var(--lightBlue);
+    z-index: -1;
+}
+
+.section2Text p{
+    text-align: justify;
+    padding: 1rem 0;
+}
+.section2Image{
+    flex: 1;
+}
+.section2Image img{
+    width: 100%;
+}
+@media only screen and (max-width: 1200px){
+    .section1{
+        align-items: center;
+    }
+    .section2{
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .welcomeText{
+        padding-top: 3rem;
+    }
+    .section1{
+        flex-direction: column;
+        padding: 0;
+    }
+    .section2{
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .section2Text span{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .section1{
+        flex-direction: column;
+        padding: 0;
+    }
+    .section2{
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .section2Text span{
+        width: 75%;
+    }
+}

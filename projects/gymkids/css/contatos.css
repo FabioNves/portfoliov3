@@ -1,0 +1,113 @@
+.contatosBox{
+    display: flex;
+    padding: 3rem 5rem;
+}
+
+.mainContatos{
+    flex: 1;
+    padding: 2rem;
+    color: #003366;
+}
+.mainContatos h2{   
+    padding: 1rem 0;
+    text-align: left;
+}
+.mainContatos p{
+    padding: 1rem 0;
+    text-align: left;
+}
+.mainContatos img{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+
+.contatoInfo{
+    display: flex;
+}
+.contatoInfo .whats{
+    flex: 1;
+}
+.contatoInfo .email{
+    flex: 1;
+}
+
+.formulario{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 4rem;
+    padding: 1rem 1rem;
+    text-align: left;
+    background-color: var(--green);
+    border-radius: .2rem;
+}
+
+.formulario h4{
+    padding: .5rem 0;
+}
+input{
+    border: none;
+    border-radius: .2rem;
+}
+#fname{
+    width: 100%;
+    height: 2rem;
+}
+#email{
+    width: 100%;
+    height: 2rem;
+}
+#menssagem{
+    width: 100%;
+    height: 10rem;
+}
+#menssagem[type="text"]{
+    top: 0;
+}
+#enviar{
+    margin: 1rem;
+    background-color: #003366;
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: .2rem;
+    transition: 0.2s ease-out;
+}
+#enviar:hover{
+    margin: 1rem;
+    background-color: white;
+    color: #003366;
+    padding: .5rem 1.5rem;
+    border-radius: .2rem;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px){
+    .contatosBox{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .contatosBox{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .contatosBox .mainContatos h2{
+        padding: 3rem 0 1rem 0;
+    }
+    .contatosBox .mainContatos{
+        padding: 2rem 0;
+    }
+    .contatoInfo{
+        flex-direction: column;
+    }
+    .formulario{
+        margin: 4rem 0;
+    }
+    .formulario h2{
+        padding: 1rem 0;
+    }
+}

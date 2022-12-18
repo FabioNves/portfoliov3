@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'commons-sans';
+    src: url('fonts/CommonSans-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+:root{
+    --color-azul: #3557FF;
+    --color-amarelo: rgb(255, 222, 155);
+    font-size: 1.5vw;
+    line-height: 1.4em;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: 'commons-sans';
+}
+
+a{
+    text-decoration: none;
+}
+
+/* tipo */
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.777rem;
+    line-height: 1em;
+    margin-bottom: 3rem;
+}
+
+h3{
+    font-size: 1.333rem;
+    line-height: 1.2em;
+    margin-bottom: .5rem;
+}
+
+/* header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background: var(--color-azul);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 3rem;
+    z-index: 100;
+}
+
+header .logo{
+    line-height: 4rem;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+header .logo div{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: .75rem;
+}
+
+header .logo div img{
+    margin-top: 1rem;
+    height: 2rem;
+    width: auto;
+}
+
+header .logo a{
+    color: #FFF;
+}
+
+header .menu-mobile{
+    display: none;
+}
+
+header ul{
+    list-style: none;
+    text-align: right;
+    line-height: 4rem;
+}
+
+header ul li{
+    display: inline-block;
+    margin-left: 1.5rem;
+    text-transform: uppercase;
+    vertical-align: top;
+    color: #FFF;
+}
+
+header ul li.active{
+    text-decoration: underline;
+}
+
+header ul li img{
+    height: 2rem;
+    width: auto;
+    margin-top: 1rem;
+}
+
+header ul li a{
+    color: #FFF;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+header ul li a:hover{
+    text-decoration: underline;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+/* banner */
+#banner{
+    margin-top: 4rem;
+    width: 100%;
+    height: calc(100% - 4rem);
+    background: var(--color-amarelo);
+}
+
+#banner .swiper-container{
+    width: 100%;
+    height: 100%;
+}
+
+#banner .swiper-slide{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+    padding: 20rem;
+}
+
+
+/* coleccão */
+.coleccao{
+    padding: 3rem 0;
+}
+
+.coleccao.fundo-cinzento{
+    background-color: #EBEBEB;
+}
+
+/* btn-livros */
+.btn-livros{
+    margin-top: 2rem;
+    text-align: center; 
+}
+
+.btn-livros a{
+    display: inline-block;
+    border: 2px solid var(--color-azul);
+    color: var(--color-azul);
+    border-radius: 1rem;
+    height: 2rem;
+    line-height:  2rem;
+    box-sizing: content-box;
+    padding: 0 1rem;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+    transition: all ease .6s;
+}
+
+.btn-livros a:hover{
+    color: #FFFFFF;
+    background: var(--color-azul);
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+    transition: all ease .6s;
+}
+
+
+/* Todos os livros */
+    main{
+        margin-top: 4rem;
+        padding: 2rem 0;
+    }
+
+
+/* livros */
+.thumb-livro .livro-imagem{
+    background: var(--color-amarelo);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.thumb-livro .livro-imagem .livro-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.thumb-livro .livro-imagem img{
+    margin-top: 12%;
+    width: auto;
+    height: 80%;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+    box-shadow: -.5rem .5rem 1rem #555;
+}
+
+
+
+.thumb-livro .livro-categorias{
+    font-size: 0.75rem;
+    line-height: 1.4em;
+    margin-bottom: .5rem;
+    text-transform: lowercase;
+}
+
+.thumb-livro.item-4 .livro-imagem{
+    height: 25rem;
+}
+
+.thumb-livro.item-3 .livro-imagem{
+    height: 18rem; 
+}
+
+
+
+/* sobres */
+
+.sobre .contacto{
+    grid-column: 2 / span 5;
+}
+
+.sobre .mapa{
+    grid-column: span 5;
+    background: var(--color-amarelo);
+    height: 15rem;
+    padding: 2rem;
+}
+
+.sobre .mapa iframe{
+    width: 100%;
+    height: 100%;
+    filter: grayscale();
+}
+
+/* footer */
+footer{
+    background-color: var(--color-azul);
+    display: flex;
+    justify-content: space-between;
+    color: #FFF;
+    padding: .75rem 3rem;
+    text-transform: uppercase;
+    font-size: .75rem;
+    line-height: .75rem;
+}
+
+
+/* tablet */
+@media screen and (max-width: 769px) {
+    :root{
+        font-size: 2.5vw;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 577px) {
+    :root{
+        font-size: 4vw;
+    }
+    /* header */
+    header{
+        padding: 0 1.5rem;
+        height: 4rem;
+        overflow: hidden;
+        transition: all .5s;
+    }
+
+    header.active{
+        height: 100vh;
+        transition: all .5s;
+    }
+
+    header .menu-mobile{
+        display: block;
+        text-align: right;
+        line-height: 4rem;
+        color: #FFF;
+        text-transform: uppercase;
+        cursor: pointer;
+        justify-self: right;
+    }
+
+    header .menu-mobile .burger{
+        width: 2rem;
+        padding-top: .75rem;
+    }
+
+    header .menu-mobile .burger span{
+        width: 100%;
+        height: 2px;
+        background-color: #FFF;
+        margin: .5rem 0;
+        display: block;
+        border-radius: 2px;
+    }
+
+    header nav{
+        grid-column: span 2;
+    }
+    header ul{
+        text-align: center;
+        line-height: 2em;
+    }
+
+    header ul li{
+        margin-left: 0;
+        display: block;
+        width: 100%;
+    }
+
+    header ul li img{
+        margin-top: .5rem;
+        height: 1.5rem;
+    }
+
+    /* Todos os livros */
+    main{
+        margin-top: 5rem;
+        padding: 2rem 0;
+    }
+
+    .sobre .contacto{
+        grid-column: span 12;
+        margin-bottom: 3rem;
+    }
+    
+    .sobre .mapa{
+        grid-column:  span 12;
+        background: var(--color-amarelo);
+        height: 15rem;
+        padding: 1rem;
+    }
+
+
+    /* footer */
+footer{
+    padding: .75rem 1.5rem;
+}
+
+
+}
+

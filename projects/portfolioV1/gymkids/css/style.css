@@ -1,0 +1,1076 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+@font-face {
+    font-family: 'signpainter';
+    src: url('/gymkids/css/fonts/SignPainter_HouseBrush.ttf') format('ttf'),
+    url('/gymkids/css/fonts/signpainter_housebrush-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'futura';
+    src: url('fonts/Futura.ttf') format('ttf'),
+         url('fonts/futura-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'futura';
+    src: url('fonts/Futura-bold.ttf') format('ttf'),
+         url('fonts/futura-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: 'futura';
+    line-height: 1.4em;
+    font-size: 1.5vw;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*** menu ***//*** menu ***//*** menu ***//*** menu ***//*** menu ***//*** menu ***/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    grid-gap: 0rem;
+    z-index: 1000;
+}
+header .menu-mobile{
+    display: none;
+}
+header .burger{
+    background-color: white;
+    color: #003366;
+}
+.menuu{
+    display: grid;
+    text-align: center;
+    grid-gap: 0rem;
+    background-color: white;
+}
+.menuu a{
+    color: white;
+    height: 3rem;
+    line-height: 3rem;
+}
+.menuu a:hover{
+    color: green;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+    transition: all ease .6s;
+}
+#logo{
+    height: 3rem;
+    padding-top: 0.5rem;
+}
+
+#logo img{
+    height: 2rem;
+    width: auto;
+}
+
+#sobre{
+    background-color: #ff3333;
+}
+#prograamas{
+    background-color:  #0066cc;
+}
+#galeria{
+    background-color: #ff9900;
+}
+#contactos{
+    background-color: #66cc33;
+}
+
+/*** banner ***//*** banner ***//*** banner ***//*** banner ***//*** banner ***//*** banner ***/
+
+#banner{
+    margin-top: 4rem;
+    background: url('../img/background.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-6 h2{
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    margin-top: 14rem;
+}
+/* botao */
+
+.btn-sabermais{
+    margin-top: 4rem;
+    margin-left: 6rem;
+}
+
+.btn-sabermais a{
+    color: white;
+    background: #ff9900;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 1vw 5vw;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+    transition: all ease .6s;
+    
+}
+
+.btn-sabermais a:hover{
+    color: white;
+    background: #0066cc;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+    transition: all ease .6s;
+}
+
+
+/* welcome *//* welcome *//* welcome *//* welcome *//* welcome *//* welcome *//* welcome */
+.welcome{
+    padding: 3rem 4rem;
+    background: #ff3333;    
+}
+.welcome h2{
+    padding: 0 4.5rem;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: 'Signpainter';
+    color: #003366;
+    font-size: 3rem;
+    text-align: center;
+}
+.thumb-welcome{
+    background: #0066cc;
+    height: 30rem;
+    border-radius: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+    z-index: -100;
+}
+.video{
+    background: url('../img/img2.jpg');
+    background-size: cover;
+    border-radius: 2vw;
+    position: relative;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1); 
+    height: auto;
+}
+.texto{
+    padding: 2rem;
+    top: 0;
+    z-index: 10;
+}
+.texto p{
+    font-size: 1rem;
+    color: white;
+}
+
+.thumb-welcome.item-6 .video{
+    height: 25.5rem;
+}
+
+/*** beneficios ***//*** beneficios ***//*** beneficios ***//*** beneficios ***/
+.beneficios{
+    padding: 0 4rem;
+    margin-top: 3rem;
+}
+.beneficios h2{
+    padding: 0 4.5rem;
+    padding-top: 5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Signpainter';
+    color: #003366;
+    font-size: 3rem;
+}
+.beneficios p{
+    text-align: center;
+    padding:0 6rem;
+}
+.acordiao-btn{
+    background-color: #CCCCCC;
+    padding: 1rem;
+    color: white;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.acordiao-btn.active{
+    background-color: lightblue;
+}
+
+.acordiao-btn::after{
+    content: '\002B';
+    float: right;
+}
+
+.acordiao-btn.active::after{
+    content: '\2212';
+}
+
+.acordiao-btn:hover{
+    background-color: #999;
+    cursor: pointer;
+}
+
+.acordiao-content{
+    display: none;
+    padding: 1.5rem;
+    background-color: rgb(240, 240, 240);
+}
+#um{
+    background-color: #ff3333;
+    vertical-align: top;
+    box-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.2),
+                0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+                
+}
+#um img{
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+#um div{
+    display: inline;
+    vertical-align: middle;
+}
+#um-c{    
+    border-top-left-radius: 1.5rem;
+    box-shadow: 0 -1.5rem 0 0 #ff3333;
+}
+#dois{
+    background-color: #0066cc;
+    vertical-align: top;
+    box-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.2),
+                0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+}
+#dois img{
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+#dois div{
+    display: inline;
+    vertical-align: middle;
+}
+#dois-c{    
+    border-top-left-radius: 1.5rem;
+    box-shadow: 0 -1.5rem 0 0 #0066cc;
+}
+#tres{
+    background-color: #ff9900;
+    vertical-align: top;
+    box-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.2),
+                0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+}
+#tres img{
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+#tres div{
+    display: inline;
+    vertical-align: middle;
+}
+#tres-c{    
+    border-top-left-radius: 1.5rem;
+    box-shadow: 0 -1.5rem 0 0 #ff9900;
+}
+#quatro{
+    background-color: #66cc33;
+    vertical-align: top;
+    box-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.2),
+                0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+}
+#quatro img{
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+#quatro div{
+    display: inline;
+    vertical-align: middle;
+}
+#quatro-c{    
+    border-top-left-radius: 1.5rem;
+    box-shadow: 0 -1.5rem 0 0 #66cc33;
+}
+#cinco{
+    background-color: #ff3333;
+    vertical-align: top;
+    box-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.2),
+                0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+}
+#cinco img{
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+#cinco div{
+    display: inline;
+    vertical-align: middle;
+}
+#cinco-c{    
+    border-top-left-radius: 1.5rem;
+    box-shadow: 0 -1.5rem 0 0 #ff3333;
+}
+#seis{
+    background-color: #0066cc;
+    vertical-align: top;
+    box-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.2),
+                0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+}
+#seis img{
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+#seis div{
+    display: inline;
+    vertical-align: middle;
+}
+#seis-c{    
+    border-top-left-radius: 1.5rem;
+    box-shadow: 0 -1.5rem 0 0 #0066cc;
+}
+.imagem-cinco img{
+    height: 15rem;
+    width: 22rem;
+}
+/*** programas ***//*** programas ***//*** programas ***//*** programas ***/
+#programas{
+    background-color: white;
+    padding:0 6rem;
+    margin-top: 3rem;
+}
+.pc-tab > input,
+.pc-tab section > div {
+    display: none;
+}
+#tab1:checked ~ section .tab1,
+#tab2:checked ~ section .tab2,
+#tab3:checked ~ section .tab3{
+    display: block;
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+.pc-tab{
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.pc-tab h1{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Signpainter';
+    color: #003366;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+.pc-tab ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.pc-tab ul li.tab1 label{
+    float: left;
+    padding: 1rem 2rem;
+    border-bottom: 0;
+    background-color: #0066cc;
+    color: #003366;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.pc-tab ul li.tab2 label{
+    float: left;
+    padding: 1rem 2rem;
+    border-bottom: 0;
+    background-color: #66cc33;
+    color: #003366;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.pc-tab ul li.tab3 label{
+    float: left;
+    padding: 1rem 2rem;
+    border-bottom: 0;
+    background-color: #ff9900;
+    color: #003366;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.pc-tab ul li.tab3 label:hover{
+    background-color: #ff9900;
+    color: white;
+}
+.pc-tab ul li.tab2 label:hover{
+    background-color: #66cc33;
+    color: white;
+}
+.pc-tab ul li.tab1 label:hover{
+    background-color: #0066cc;
+    color: white;
+}
+.pc-tab ul li label:active{
+    border:2px solid white;
+}
+.pc-tab ul li:not(:last-child) label{
+    border-right-width: 0;
+}
+.pc-tab section{
+    clear: both;
+}
+.pc-tab section .tab3{
+    padding: 2rem;
+    width: 100%;
+    border:4px solid #ff9900;
+    line-height: 1.5em;
+    letter-spacing: 0.075rem;
+    color: #003366;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    box-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.2),
+                0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+
+}
+.pc-tab section .tab2{
+    padding: 2rem;
+    width: 100%;
+    border:4px solid #66cc33;
+    line-height: 1.5em;
+    letter-spacing: 0.075rem;
+    color: #003366;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    box-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.2),
+                0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+}
+.pc-tab section .tab1{
+    padding: 2rem;
+    width: 100%;
+    border:4px solid #0066cc;
+    line-height: 1.5em;
+    letter-spacing: 0.075rem;
+    color: #003366;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    box-shadow: -1rem -1rem 0.5rem rgba(255, 255, 255, 0.2),
+                0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+}
+.pc-tab section div h2{
+    margin: 0;
+    letter-spacing: 0.15rem;
+    color: #003366;
+}
+#tab1:checked ~ nav .tab1 label{
+    background-color: #0066cc;
+    color: white;
+    position: relative;
+}
+#tab2:checked ~ nav .tab2 label{
+    background-color: #66cc33;
+    color: white;
+    position: relative;
+}
+#tab3:checked ~ nav .tab3 label{
+    background-color: #ff9900;
+    color: white;
+    position: relative;
+}
+#tab1:checked ~ nav .tab1 label:after,
+#tab2:checked ~ nav .tab2 label:after,
+#tab3:checked ~ nav .tab3 label:after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0rem;
+    width: 100%;
+    left: 0;
+    bottom: -1rem;
+}
+
+/*** Galeria ***//*** Galeria ***//*** Galeria ***//*** Galeria ***//*** Galeria ***/
+.galeria{
+        margin-top: 3rem;
+        width: 100%;
+        padding: 2rem 6rem;
+        background: #ff9900;
+    }
+   .galeria h2{
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-top: 3rem;
+        font-family: 'Signpainter';
+        color: #003366;
+        font-size: 3rem;
+    }       
+.galeria .swiper-container{
+        width: 100%;
+        height: 30rem;
+        border-radius: 2rem;
+    }
+    
+.galeria .swiper-slide{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        mix-blend-mode: multiply;
+        border-radius: 2rem;
+    }
+.galeria .swiper-pagination{
+    display: none;
+}
+/*** Fale Connosco ***//*** Fale Connosco ***//*** Fale Connosco ***//*** Fale Connosco ***/
+
+.contactos{
+    padding: 3rem 2rem;
+    background: #66cc33;
+}
+.contactos h2{
+    text-align: center;
+    padding: 0 2rem;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: 'Signpainter';
+    color: #003366;
+    font-size: 3rem;
+}
+.contactos h3{
+    font-family: 'Signpainter';
+    color: #003366;
+    font-size: 2rem;
+    text-align: left;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+}
+.contactos h4{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+.contactos .grid .item-1.thumb-contacto div img{
+    width: 4rem;
+    margin-top: 1.9rem;
+}
+.thumb-contact-box{
+    text-align: center;
+}
+
+.input-field{
+    display: grid;
+    width: 25rem;
+    height: 2rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 0.1rem solid #003366;
+    border-radius: 0.5rem;
+    outline: none;
+    background: rgba(255, 255, 255, .2);
+    color: #003366;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+}
+.textarea-field{
+    height: 12rem;
+    padding-top: 1rem;
+    color: #003366;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.1);
+}
+.btn{
+    margin-top: 2rem;
+    text-align: center;
+}
+.item-6.thumb-contact-box h3{
+    text-align: center;
+}
+.btn a{
+    display: inline-block;
+    color: white;
+    height: 1rem;
+    line-height: 1rem;
+    box-sizing: content-box;
+    padding: 0.5rem 1.5rem;
+    background-color: #003366;
+    border-radius: 2rem;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+    transition: all ease .6s;
+}
+
+.btn a:hover{
+    color: #003366;
+    background-color: #fff;
+    -webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+    transition: all ease .6s;
+}
+/*** Footer ***//*** Footer ***//*** Footer ***//*** Footer ***//*** Footer ***/
+footer{
+    background: #ff3333;
+    height: 8rem;
+}
+.item-3.footer h2{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.item-3.footer p{
+    margin-top: 0.2rem;
+    font-size: 0.6rem;
+}
+.item-6.mid h2{
+    margin-top: 6rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+.item-3.social h2{
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.item-3.social img{
+    height: 1.5rem;
+    padding:0 1rem;
+    float: right;
+    margin-top: 1rem;
+}
+
+/* tablet */
+@media screen and (max-width: 769px) {
+    :root{
+        font-size: 2vw;
+    }
+    /******** TABLET - BANNER ********/
+#banner{
+    width: 100%;
+    height: 30rem;
+    padding: 0rem;
+}
+
+/********* TABLET - WELCOME *******/ 
+.welcome{
+    padding: 2rem 0rem; 
+}
+.welcome h2{
+    padding: 0rem; 
+    font-size: 3rem;
+}
+
+.thumb-welcome .texto{
+    background: #0066cc;
+    height: 25.5rem;
+    width: 28rem;
+}
+.texto p{
+    font-size: 1rem;
+    color: white;
+    
+    line-height: 1.4rem;
+
+}
+
+/************* TABLET - BENEFICIOS *************/
+
+
+.beneficios p{
+    font-size: 1.25rem;
+    padding: 1rem;
+    line-height: 1.5rem;
+}
+.input-field{
+    width: 20rem;
+}
+.contactos h4{
+    margin-top: 2rem;
+    width: 15rem;
+}
+.item-1.thumb-contacto, .item-5.thumb-info{
+    grid-column-start: span 3;
+}
+.acordiao-content{
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+/************* TABLET - PROGRAMAS *************/
+.pc-tab h1{
+    font-size: 3rem;
+}
+.pc-tab ul li.tab1 label{
+    font-size: 1rem;
+    padding: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.pc-tab ul li.tab2 label{
+    font-size: 1rem;
+    padding: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.pc-tab ul li.tab3 label{
+    font-size: 1rem;
+    padding: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    border-bottom-right-radius: 1rem;
+}
+.pc-tab section .tab1{
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+.pc-tab section .tab2{
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+.pc-tab section .tab3{
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+/***************** TABLET - GALERIA *****************/ 
+
+.galeria .swiper-container{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    width: 100%;
+}
+.swiper-slide{
+    width: 100%;
+    background-size: cover;
+}
+.galeria {
+    padding: 2rem 0rem;
+}
+.galeria .swiper-pagination{
+display: none;
+}
+/****************** TABLET - CONTACTOS *******************/ 
+
+.contactos{
+    padding: 2rem 0rem;
+}
+.contactos .grid .item-1.thumb-contacto div img{
+    margin-top: 3rem;
+}
+.contactos h2{
+    font-size: 3rem;
+}
+.contactos h3{
+    font-size: 1.8rem;
+}
+.item-1.thumb-contacto{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.item-5.thumb-info{
+    grid-column-start: 3;
+    grid-column-end: 7;
+}
+
+.btn {
+    font-size: .75rem;
+}
+
+/****************** TABLET - FOOTER *******************/ 
+footer{
+    height: 9rem;
+}
+.item-3.footer p{
+    font-size: .75rem;
+    padding-bottom: 1rem;
+}
+.item-6.mid h2{
+    font-size: .75rem;
+    padding-bottom: 1rem;
+}
+.item-3.social img{
+    padding:0 .75rem;
+}
+
+}
+
+/****************** MOBILE *******************/
+/****************** MOBILE *******************/
+/****************** MOBILE *******************/
+/****************** MOBILE *******************/
+/****************** MOBILE *******************/
+/****************** MOBILE *******************/
+/****************** MOBILE *******************/
+@media screen and (max-width: 577px) {
+    :root{
+        font-size: 4vw;
+    }
+    /* header */
+    header{
+        height: 4rem;
+        overflow: hidden;
+        transition: all .5s;
+        position: fixed; 
+    }
+.menuu{
+    font-size: 1.5rem;
+    
+}
+    header.active{
+        height: 20rem;
+        transition: all .5s;
+    }
+
+    header .menu-mobile{
+        display: inline-block;
+        line-height: 4rem;
+        background-color: white;
+        width: 100%;
+        color: #FFF;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    header .menu-mobile .logo-burger{
+        display: inline-block;
+        margin-left: 5rem;
+        margin-top: 1rem;
+    }
+
+    header .menu-mobile .logo-burger img{
+        height: 2.5rem;
+        width: 10rem;
+    }
+    header #logo.item-3{
+        display: none;
+    }
+
+    header .menu-mobile .burger{
+        height: 2.5rem;
+        width: 2rem;
+        padding-left: 1rem;
+        display: inline-block;
+    }
+
+    header .menu-mobile .burger span{
+        width: 2rem;
+        height: .2rem;
+        background-color: #003366;
+        margin: .5rem 0;        
+        display: block;
+        border-radius: .2rem;
+    }
+
+    
+/******** MOBILE - BANNER ********/
+#banner{
+    background: url('../img/mobile-banner.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.item-6 h2{
+    font-size: 1.5rem;
+}
+.btn-sabermais a{
+    font-size: 1rem;
+}
+
+
+/********* MOBILE - WELCOME *******/ 
+    .welcome{
+        padding: 2rem 0rem; 
+    }
+    .welcome h2{
+        padding: 0rem; 
+        font-size: 2rem;
+        padding-top: 3rem;
+    }
+    .video{
+        margin-bottom: 1.5rem;
+        background-size: cover;
+        border-radius: 2vw;  
+        height: 25rem;
+    }
+    .texto{
+        line-height: 1.25rem;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        padding-top: 0rem;
+    }
+    .texto p{
+        font-size: 1rem;
+        color: white;
+        padding: 0rem;
+
+    }
+/************* MOBILE - BENEFICIOS *************/
+
+    #beneficios.beneficios{
+        padding: 0rem;
+    }
+    .beneficios h2{
+        font-size: 2rem;
+       padding-top: 5rem;
+       margin-bottom: .5rem;
+    }
+    .beneficios p{
+        font-size: 1.25rem;
+        padding: 1rem;
+        line-height: 1.5rem;
+    }
+    .input-field{
+        width: 20rem;
+    }
+    .contactos h4{
+        margin-top: 2rem;
+        width: 15rem;
+    }
+    .item-1.thumb-contacto, .item-5.thumb-info{
+        grid-column-start: span 3;
+    }
+    .acordiao-content{
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+/***************** MOBILE - PROGRAMAS ***************/
+#programas{
+    padding: 2rem 1rem; 
+    margin-top: 0rem;
+}
+.pc-tab h1{
+    font-size: 2rem;
+}
+.pc-tab ul li.tab1 label{
+    font-size: 1rem;
+    padding: .5rem;
+    line-height: 1.5rem;
+    width: 7.5rem;
+    text-align: center;
+}
+.pc-tab ul li.tab2 label{
+    font-size: 1rem;
+    padding: .5rem;
+    line-height: 1.5rem;
+    width: 7.5rem;
+    text-align: center;
+}
+.pc-tab ul li.tab3 label{
+    font-size: 1rem;
+    padding: .5rem;
+    line-height: 1.5rem;
+    width: 7.5rem;
+    text-align: center;
+    border-bottom-right-radius: 1rem;
+}
+.pc-tab section .tab1{
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+.pc-tab section .tab2{
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+.pc-tab section .tab3{
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+.imagem-cinco img{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 20rem;
+}
+/***************** MOBILE - GALERIA *****************/ 
+.galeria{
+    padding: 2rem 0rem;
+    height: 40rem;
+    margin: 0rem;
+}     
+.galeria h2{
+    font-size: 2rem;
+}
+.galeria .swiper-container{
+    width:20rem;
+    height: 30rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.galeria .swiper-slide{
+    width: 20rem;
+    height: 30rem;
+}
+.galeria .swiper-pagination{
+display: none;
+}
+
+/****************** MOBILE - CONTACTOS *******************/ 
+
+.contactos{
+    padding: 2rem 1rem;
+    margin-top: 0rem;
+}
+.contactos h2{
+    font-size: 2rem;
+    margin: 0rem 2rem;
+}
+.contactos .grid .item-1.thumb-contacto div img{
+    margin-top: 2rem;
+}
+.btn {
+    font-size: .75rem;
+}
+.thumb-contact-box h3{
+    line-height: 1rem;
+}
+/* footer */
+    footer{
+        height: 21rem;
+    }
+    .item-3.footer h2{
+        text-align: center;
+    }
+    .item-3.footer p{
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .item-6.mid h2{
+        margin-top: 0.015rem;
+        font-size: 0.75rem;
+    }
+    .item-3.social h2{
+        font-size: 1.25rem;
+        margin-top: 0.75rem;
+    }
+    .item-3.social img{
+        float: right;
+        height: 2rem;
+        margin-right: 3rem;
+    }
+
+}

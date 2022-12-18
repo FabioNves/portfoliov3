@@ -1,0 +1,115 @@
+.blogBox{
+    padding: 3rem 5rem;
+}
+.blogBox h1{
+    text-align: center;
+    padding: 3rem 15rem;
+}
+.contentorBlog{
+    display: flex;
+}
+/*** Main articles ***/
+.mainArticles{
+    flex: 3;
+    padding: 3rem;
+}
+
+.mainArticles .article{
+    display: flex;
+    flex-direction: column;
+    border: .125rem solid #003366;
+    border-radius: .2rem;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+.mainArticles .article img{
+    width: 100%;
+}
+.mainArticles .article h2{
+    padding: 1rem 0;
+}
+.mainArticles .article ul{
+    display: inline-block;
+    list-style: none;
+    
+    padding: 0 .2rem;
+}
+.mainArticles .article ul li{
+    font-size: .75rem;
+    display: inline-block;
+    padding: .75rem 2rem .5rem 0;
+}
+.mainArticles .article .btn{
+    text-align: right;
+    padding-top: 2rem;
+}
+.mainArticles .article .btn a{
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: #003366;
+    border: .1rem solid #003366;
+    border-radius: .2rem;
+    transition: 0.2s ease-in-out;
+}
+.mainArticles .article .btn a:hover{
+    color: white;
+    background-color: #003366;
+    border: .1rem solid #003366;
+    transition: 0.2s ease-in-out;
+}
+
+/*** Aside ***/
+.aside{
+    flex: 1;
+    padding: 1rem;
+}
+.aside .article{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightBlue);
+    padding: 1rem;
+    margin: 2rem 0;
+    border-radius: .2rem;
+}
+.aside .article img{
+    width: 100%;
+}
+.aside .article h3{
+    padding: 1rem 0;
+}
+.aside .article .btn{
+    text-align: right;
+    padding-top: 2rem;
+}
+.aside .article .btn a{
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: #003366;
+    border: .1rem solid #003366;
+    border-radius: .2rem;
+    transition: 0.2s ease-in-out;
+}
+.aside .article .btn a:hover{
+    color: white;
+    background-color: #003366;
+    border: .1rem solid #003366;
+    transition: 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 1000px){
+    .blogBox{
+        padding: 3rem 1rem;
+    }
+    .blogBox h1{
+        padding: 3rem 0;
+    }
+    .contentorBlog{
+        flex-direction: column;
+    }
+    .mainArticles{
+        padding: 0;
+    }
+    .mainArticles .article ul li{
+        font-size: .5rem;
+    }
+}

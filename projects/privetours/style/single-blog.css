@@ -1,0 +1,57 @@
+:root{
+    --darkBlue: #183147;
+    --blue: #2F93EB;
+    --lightBlue: #E4EAF0;
+    --orange: #EBA22F;
+}
+
+.bannerBlog{
+    height: 25rem;
+    position: relative;
+}
+.bannerBlog img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blogBox{
+    display: flex;
+}
+.mainBlog{
+    flex: 2;
+    position: relative;
+}
+.mainBlog a{
+    text-decoration: none;
+    color: var(--darkBlue);
+}
+
+.mainBlog h1{
+    padding: 1rem 0;
+}
+.mainBlog h5{
+    padding: .5rem 0;
+}
+.mainBlog p{
+    padding: .5rem 0;
+}
+.mainBlog img{
+    width: 100%;
+    border-radius: .25rem;
+}
+
+.asideBlog{
+    flex: 1;
+}
+
+@media only screen and (max-width: 1200px){
+   .mainBlog{
+       padding-left: 1rem;
+   }
+}
+@media only screen and (max-width: 900px){
+    .mainBlog{
+        padding: 1rem;
+    }
+ }

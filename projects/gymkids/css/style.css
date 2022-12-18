@@ -1,0 +1,1207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+@font-face{
+    font-family: 'futura';
+    src: url('fonts/Futura/futura_medium_bt.ttf');
+}
+@font-face{
+    font-family: 'futura-light';
+    src: url('fonts/Futura/futura_light_bt.ttf');
+}
+@font-face{
+    font-family: 'roboto';
+    src: url('fonts/Roboto/Roboto-MediumItalic.ttf');
+}
+
+:root{
+    --darkBlue: #002952;
+    --grayBlue: #003366;
+    --red: #F14950;
+    --blue: #3385D6;
+    --orange: #FFAD33;
+    --green: #85D65C;
+    --lightBlue: #E6EBF0;
+}
+/*********************** START MENU *************************/
+/*********************** START MENU *************************/
+/*********************** START MENU *************************/
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: 'roboto';
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--darkBlue);
+}
+h1, h2, h3, h4, h5{
+    font-family: 'futura';
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    padding: 0 5rem;
+    position: fixed;
+    background-color: #fff;
+    z-index: 5;
+}
+.menu .logo{
+    width: 7.5rem;
+    height: 100%;
+    margin-top: .5rem;
+}
+.menu .logo img:hover{
+    transform: scale(1.1);
+}
+.menu .logo img{
+    width: 100%;
+    transition: all .2s ease-in-out;
+}
+.menu .nav{
+    float: right;
+    height: 3rem;
+}
+.menu .nav ul{
+    display: flex;
+    list-style: none;
+}
+.menu .nav ul li{
+    padding: 0 .2rem;
+    height: 100%;
+}
+.menu .nav ul li a{
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem .5rem 1.5rem;
+    border-bottom: 5px solid;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    border-radius: .25rem;
+}
+
+
+.nav ul li:first-child a{
+    border-bottom: .5rem solid var(--red);
+}
+.nav ul li:nth-child(2) a{
+    border-bottom: .5rem solid var(--blue);
+}
+.nav ul li:nth-child(3) a{
+    border-bottom: .5rem solid var(--orange);
+}
+.nav ul li:last-child a{
+    border-bottom: .5rem solid var(--green);
+}
+
+/** Hover **//** Hover **//** Hover **//** Hover **/
+
+.nav ul li a:after{
+    content: "";
+    height: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    z-index: -1;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.nav ul li a:hover{
+    color: white;
+}
+
+.nav ul li a:hover:after{
+    height: 100%;
+    width: 100%;
+}
+
+.nav ul li:first-child a:after{
+    background: var(--red);
+}
+.nav ul li:nth-child(2) a:after{
+    background: var(--blue);
+}
+.nav ul li:nth-child(3) a:after{
+    background: var(--orange);
+}
+.nav ul li:last-child a:after{
+    background: var(--green);
+}
+
+/*********************** END MENU *************************/
+
+/*********************** START BANNER *************************/
+/*********************** START BANNER *************************/
+/*********************** START BANNER *************************/
+.banner{
+    width: 100vw;
+    height: 75vh;
+}
+/**** SLIDER BASE ****/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 20px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  /**** SLIDE FIRST ****/
+  .swiper-slide.first{
+      text-align: left;
+      background-color: var(--blue);
+  }
+  .swiper-slide.first .textBanner{
+      width: 50%;
+      padding: 0 5rem;
+  }
+  .swiper-slide.first img{
+      position: relative;
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  }
+  .banner .swiper-slide.first h1{
+    width: 100%;
+    display: block;
+    color: #fff;
+    text-align: left;
+}
+  .banner .swiper-slide.first p{
+      width: 100%;
+      margin: 2rem 0;
+      padding-right: 2rem;
+      color: #fff;
+      text-align: left;
+  }
+  .banner .swiper-slide.first a{
+      position: absolute;
+      display: block;
+      padding: .5rem 1.5rem;
+      text-decoration: none;
+      text-align: left;
+      left: 2;
+      color: #fff;
+      background-color: rgba(36, 36, 36, 0.2);
+      border: .1rem solid white;
+      border-radius: .2rem;
+      transition: .2s all ease-in-out;
+  }
+  .banner .swiper-slide.first a:hover{
+    color: #003366;
+    background-color: white;
+  }
+
+  .swiper-slide.second{
+      background-color: var(--green);
+  }
+
+/*********************** END BANNER *************************/
+
+/*********************** START WELCOME *************************/
+/*********************** START WELCOME *************************/
+/*********************** START WELCOME *************************/
+
+.welcome{
+    text-align: left;
+    margin: 5rem;
+    display: flex;
+    align-items: center;
+}
+.welcome .welcomeText{
+    flex: 1;
+    padding: 0 5rem;
+}
+.welcome .welcomeText h1{ 
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: #003366;
+}
+
+.welcome .welcomeText p{
+   line-height: 1.5rem;
+}
+.welcome .welcomeImage{
+    flex: 1;
+}
+.welcome .welcomeImage img{
+    width: 100%;
+    border-radius: .2rem;
+}
+
+/*********************** END WELCOME *************************/
+
+/*********************** START ACTIVITIES *************************/
+/*********************** START ACTIVITIES *************************/
+/*********************** START ACTIVITIES *************************/
+.atividades{
+    text-align: center;
+    margin: 5rem 0;
+}
+.atividades h1{ 
+    margin: 2rem 0;
+    color: #003366;
+}
+.atividades p{
+    margin: 2.5rem 20rem;
+    line-height: 1.75rem;
+}
+/*** Atividade 1 ***/
+.atividade1{
+    display: flex;
+    background: var(--green);
+    align-items: center;
+}
+.atividade1 .imagem{
+    flex: 1;
+    width: 100%;
+    height: 30rem;
+}
+.atividade1 .imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.atividade1 .texto{
+    flex: 1;
+    text-align: left;
+    padding: 0 5rem;
+    line-height: 1.75rem;
+}
+.atividade1 .texto h2{
+    margin: 2rem 0;
+    color: #003366;
+}
+.atividade1 .texto p{
+  margin: 0;
+}
+.atividade1 .texto .knowMore{
+    margin: 2rem 0;
+}
+.atividade1 .texto .knowMore a{
+    text-decoration: none;
+    padding: .75rem 2rem;
+    border: .1rem solid #fff;
+    color: #fff;
+    border-radius: .2rem;
+    transition: .2s all ease-in-out;
+}
+.atividade1 .texto .knowMore a:hover{
+    color: var(--green);
+    background-color: white;
+}
+/*** Atividade 2 ***/
+
+.atividade2{
+    display: flex;
+    background: var(--blue);
+    align-items: center;
+}
+.atividade2 .imagem{
+    flex: 1;
+    width: 100%;
+    height: 30rem;
+}
+.atividade2 .imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.atividade2 .texto{
+    flex: 1;
+    padding: 0 5rem;
+    text-align: left;
+    line-height: 1.75rem;
+}
+.atividade2 .texto h2{
+    margin: 2rem 0;
+    color: var(--darkBlue);
+}
+.atividade2 .texto p{
+    margin: 0;
+}
+.atividade2 .texto .knowMore{
+    margin: 2rem 0;
+}
+.atividade2 .texto .knowMore a{
+    text-decoration: none;
+    padding: .75rem 2rem;
+    border: .1rem solid #fff;
+    color: #fff;
+    border-radius: .2rem;
+    transition: .2s all ease-in-out;
+}
+.atividade2 .texto .knowMore a:hover{
+    color: var(--blue);
+    background-color: white;
+}
+
+/*** Atividade 3 ***/
+
+.atividade3{
+    display: flex;
+    background: var(--orange);
+    align-items: center;
+}
+.atividade3 .imagem{
+    flex: 1;
+    width: 100%;
+    height: 30rem;
+}
+.atividade3 .imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.atividade3 .texto{
+    flex: 1;
+    padding: 0 5rem;
+    text-align: left;
+    line-height: 1.75rem;
+}
+.atividade3 .texto h2{
+    margin: 2rem 0;
+    color: #003366;
+}
+.atividade3 .texto p{
+    margin: 0;
+}
+.atividade3 .texto .knowMore{
+    margin: 2rem 0;
+}
+.atividade3 .texto .knowMore a{
+    text-decoration: none;
+    padding: .75rem 2rem;
+    border: .1rem solid #fff;
+    color: #fff;
+    border-radius: .2rem;
+    transition: .2s all ease-in-out;
+}
+.atividade3 .texto .knowMore a:hover{
+    color: var(--orange);
+    background-color: white;
+}
+
+/*********************** END ACTIVITIES *************************/
+
+/*********************** START BENEFITS *************************/
+/*********************** START BENEFITS *************************/
+/*********************** START BENEFITS *************************/
+
+.beneficios{
+    margin: 7.5rem 0;
+}
+
+.beneficios h1{ 
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.beneficios .contentorBeneficios{
+    display: flex;
+    justify-content: space-around;
+}
+
+.beneficios .contentorBeneficios img{
+    width: 5rem;
+    height: 5rem;
+}
+.beneficios .contentorBeneficios .beneficio1{
+    flex: 1;
+    padding: 0 3rem;
+}
+.beneficios .contentorBeneficios .beneficio2{
+    flex: 1;
+    padding: 0 3rem;
+}
+.beneficios .contentorBeneficios .beneficio3{
+    flex: 1;
+    padding: 0 3rem;
+}
+.beneficios .contentorBeneficios h3{
+    text-align: left;
+    margin: 1rem 0;
+}
+.beneficios .contentorBeneficios p{
+    text-align: left;
+}
+
+/*********************** END BENEFITS *************************/
+
+/*********************** START SEPARATOR *************************/
+/*********************** START SEPARATOR *************************/
+
+.separador{
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+    background-image: url('../img/gk.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
+}
+
+.separador h1{
+    display: block;
+    position: relative;
+    top: 45%;
+    color: white;
+}
+/*********************** END SEPARATOR *************************/
+
+/*********************** START COACH *************************/
+/*********************** START COACH *************************/
+/*********************** START COACH *************************/
+
+.instrutores{
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.instrutores h1{ 
+    margin: 5rem 0;
+}
+
+.instrutores .contentorCoach{
+    display: flex;
+    justify-content: space-around;
+}
+
+.instrutores .contentorCoach img{
+    width: 8rem;
+}
+.clip{
+    width: 37rem;
+    height: 37rem;
+    position: absolute;
+    right: 0;
+    margin-top: -20rem;
+    margin-right: 0;
+    z-index: -2;
+    background-color: var(--green);
+    clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 18% 100%, 0% 38%);
+}
+
+/*********************** END COACH *************************/
+
+/*********************** START REVIEWS *************************/
+/*********************** START REVIEWS *************************/
+/*********************** START REVIEWS *************************/
+
+.testemunhos{
+    text-align: center;
+    margin: 2.5rem 0;
+    background-color: var(--lightBlue);
+    padding: 2rem 0;
+}
+
+.testemunhos h1{ 
+    margin: 2rem 0;
+}
+
+.swiper-container2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .swiper-container2 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: transparent;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper-pagination2{
+      text-align: center;
+  }
+
+  .swiper-container2 .swiper-slide .review p{
+      display: block;
+      line-height: 1.75rem;
+  }
+  .swiper-container2 .swiper-slide .review h5{
+      text-align: right;
+      display: block;
+      padding: 2rem 0;
+  }
+  .swiper-container2 .swiper-slide .review{
+      padding: 3rem 20rem;
+  }
+
+/*********************** END REVIEWS *************************/
+
+/*********************** START BLOG *************************/
+/*********************** START BLOG *************************/
+/*********************** START BLOG *************************/
+
+.blog{
+    text-align: center;
+    margin: 7.5rem 5rem;
+}
+
+.blog h1{ 
+    margin:5rem 0;
+}
+
+.blog .artigos{
+    display: flex;
+    justify-content: space-around;
+}
+.blog .artigos img{
+    width: 18rem;
+    height: 12rem;
+    margin-bottom: -2rem;
+    border-radius: .3rem;
+    object-fit: cover;
+    transition: .2s all ease-out;
+}
+.blog .artigos img:hover{
+    transform: scale(1.02);
+}
+.blog .artigos .artigo1 img{
+    border-bottom: .5rem solid var(--blue);
+}
+.blog .artigos .artigo2 img{
+    border-bottom: .5rem solid var(--orange);
+}
+.blog .artigos .artigo3 img{
+    border-bottom: .5rem solid var(--green);
+}
+.blog .artigos .box{
+    width: 20rem;
+    background-color: var(--lightBlue);
+    border-radius: .3rem;
+    padding: 1rem;
+    text-align: left;
+}
+.blog .artigos .box .read{
+    margin: 2rem 0 0rem 0;
+    text-align: right;
+}
+.blog .artigos .box h3{
+    margin-top: 2rem;
+}
+.blog .artigos .box .read a{
+    text-decoration: none;
+    color: black;
+    padding: .3rem 1rem;
+    border: .1rem solid black;
+    border-radius: .2rem;
+    transition: .2s all ease-in-out;
+}
+.blog .artigos .box .read a:hover{
+    color: white;
+    background-color: #003366;
+}
+
+/*********************** END BLOG *************************/
+
+/*********************** START FOOTER *************************/
+/*********************** START FOOTER *************************/
+/*********************** START FOOTER *************************/
+
+footer{
+    background-color: var(--blue);
+    padding: 2rem 2.5rem 1rem 2.5rem;
+}
+.seccoes{
+    display: flex;
+    width: 100%;
+}
+.info p{
+    text-align: center;
+}
+
+.seccao1{
+    flex: 1;
+    color: #fff;
+    padding: 1rem;
+}
+.seccao1 .contatos p{
+    margin: .5rem;
+    color: var(--darkBlue);
+}
+
+.seccao1 .socialmedia{
+    padding-right: 5rem;
+}
+
+.seccao1 .socialmedia h3{
+    margin: 1rem 0;
+    color: #fff;
+}
+.seccao1 .socialmedia .icons{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5rem;
+}
+.seccao1 .socialmedia img{
+    width: 2.5rem;
+    border-radius: .5rem;
+    transition: .2s all ease-in-out;
+}
+.seccao1 .socialmedia img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.seccao2{
+    flex: 1;
+    color: #fff;
+    text-align: left;
+}
+.seccao2 .newsletter .input{
+    margin: 1rem 0;
+}
+.seccao2 .newsletter #e-mail{
+    width: 75%;
+    height: 1.5rem;
+    background-color: transparent;
+    border: .1rem solid #fff;
+    color: #fff;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+}
+.seccao2 .newsletter #enviar{
+    height: 1.5rem;
+    padding: .2rem 1rem;
+    background-color: #fff;
+    color: black;
+    margin-left: -0.5rem;
+    border: none;
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+}
+.seccao2 .menu2{
+    text-align: left;
+}
+.seccao2 .menu2 ul{
+    margin-top: .2rem;
+    list-style: none;
+}
+.seccao2 .menu2 ul li{
+    margin: .2rem;
+}
+.seccao2 .menu2 ul li a{
+    text-decoration: none;
+    color: var(--darkBlue);
+}
+.seccao2 .menu2 ul li a:hover{
+    color: #fff;
+}
+::placeholder {
+    color: var(--darkBlue);
+    opacity: 1;
+  }
+.seccao3{
+    flex: 1;
+    height: 15rem;
+}
+
+.seccao3 img{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+}
+  /**** menu ****/
+
+  .menu li {
+    float: left;
+  }
+  .menu li a {
+    padding: 20px 30px;
+  }
+  .menu .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .menu .menu-icon {
+    display: none;
+  }
+  .menu .menu-btn {
+    display: none;
+  }
+
+
+/*********************** END FOOTER *************************/
+@media only screen and (max-width: 1200px){
+    .welcome .welcomeText{
+        padding: 0 2rem;
+    }
+     /*** Banner- TABLET ***/
+     .swiper-slide.first .textBanner{
+         padding-right: 0;
+     }
+     .banner .swiper-slide.first p{
+         padding-right: 0;
+     }
+     /*** Atividades - TABLET ***/
+     .atividades p{
+        margin: 2.5rem 8rem;
+    }
+    /*** Instrutores - TABLET ***/
+    .clip{
+        position: absolute;
+        margin-right: 0;
+        margin-top: -10rem;
+        transform: rotate(0deg);
+        clip-path: polygon(71% 0, 100% 0%, 100% 100%, 54% 100%, 19% 55%);
+    }
+       /*** Testemunhos - TABLET ***/
+       .swiper-container2 .swiper-slide .review{
+        padding: 3rem 7.5rem;
+    }
+     /*** Blog - TABLET ***/
+    .blog{
+        margin: 5rem 2rem;
+    }
+    .blog .artigos img{
+        width: 12rem;
+        height: 10rem;
+    }
+    .blog .artigos .box{
+        width: 15rem;
+        padding: .5rem;
+    }
+    .blog .artigos .box h3{
+        text-align: left;
+        margin: 2rem .5rem 1rem .5rem;
+    }
+    /*** Footer - TABLET ***/
+    .seccao1 .socialmedia{
+        padding-right: 2rem;
+    }
+    .seccao1 .socialmedia .icons{
+        padding-right: 0;
+    }
+}
+@media only screen and (max-width: 900px){
+    .menu{
+        padding: 0 2rem;
+    }
+    .menu .nav ul li a{
+        font-size: .75rem;
+        padding: 1.5rem 1.5rem .5rem 1.5rem;
+    }
+    .welcome{
+        margin: 5rem 2rem;
+    }
+    .welcome .welcomeText{
+        padding: 0 2rem;
+    }
+     /*** Atividades - TABLET ***/
+     .atividades p{
+         margin: 2.5rem 2rem;
+     }
+     /*** Intrutores- TABLET ***/
+     .clip{
+         position: absolute;
+         margin-right: 0;
+         margin-top: -10rem;
+         transform: rotate(0deg);
+         clip-path: polygon(71% 0, 100% 0%, 100% 100%, 54% 100%, 19% 55%);
+     }
+      /*** Testemunhos - TABLET ***/
+      .swiper-container2 .swiper-slide .review{
+        padding: 3rem 5rem;
+    }
+
+    /*** Blog - TABLET ***/
+    .blog{
+        margin: 5rem 2rem;
+    }
+    .blog h1{
+        margin: 2.5rem 0;
+    }
+    .blog .artigos img{
+        width: 9rem;
+        height: 6rem;
+    }
+    .blog .artigos .box{
+        width: 12rem;
+        padding: .2rem;
+    }
+    .blog .artigos .box .read{
+        margin: .5rem;
+    }
+    .blog .artigos .box h3{
+        text-align: left;
+        font-size: .8rem;
+        margin: 2rem .5rem 1rem .5rem;
+    }
+    .blog .artigos .box .read a{
+        font-size: .75rem;
+    }
+
+    /*** Footer - TABLET ***/
+    footer{
+        background-color: #0066CC;
+        padding: 2rem 2rem 1rem 2rem;
+    }
+
+    .seccao1 .socialmedia{
+        padding-right: 0;
+    }
+    .seccao1 .socialmedia .icons{
+        padding-right: 0;
+    }
+    .seccao2{
+        flex: 2;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 3rem .5rem;
+    }
+    .seccao3{
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px){
+   
+    .menu{
+        display: block;
+        padding: 0;
+        background: white;
+    }
+    .menu .logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: .5rem 0 0 0;
+        margin: 0 1rem;
+        text-decoration: none;
+      }
+
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+      }
+      .menu .nav ul {
+        display: block;
+       /* width: 100vw; */
+       max-width: 0;
+        padding: 0;
+        clear: both;
+       /* max-height: 0; */
+       /* transition: max-height .2s ease-out; */
+       transition: max-width .2s ease-out;
+      }
+      .menu .nav ul li{
+          padding: 0;
+      }
+      .menu li{
+          width: 100%;
+          background-color: white;
+          margin: 0;
+          padding: 0;
+      }
+      .menu li a {
+        display: block;
+        padding: 0;
+        text-align: center;
+      }
+      
+      .menu li a:hover,
+      .menu .menu-btn:hover {
+        background-color: #f4f4f4;
+      }
+
+      .nav ul li:first-child a{
+        background-color: #ED1C24;
+        color: white;
+        border-radius: 0;
+    }
+    .nav ul li:nth-child(2) a{
+        background-color: #0066CC;
+        color: white;
+        border-radius: 0;
+    }
+    .nav ul li:nth-child(3) a{
+        background-color: #FF9900;
+        color: white;
+        border-radius: 0;
+    }
+    .nav ul li:last-child a{
+        background-color: #66CC33;
+        color: white;
+        border-radius: 0;
+    }
+      
+      /*** menu burger ***/
+      
+      .menu .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 1.4rem;
+        position: relative;
+        user-select: none;
+      }
+      
+      .menu .menu-icon .navicon {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+      }
+      
+      .menu .menu-icon .navicon:before,
+      .menu .menu-icon .navicon:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+      }
+      
+      .menu .menu-icon .navicon:before {
+        top: 5px;
+      }
+      
+      .menu .menu-icon .navicon:after {
+        top: -5px;
+      }
+      
+      /* menu btn */
+      
+      .menu .menu-btn {
+        display: none;
+      }
+      
+      .menu .menu-btn:checked ~ .nav ul {
+        /* max-height: 100vh; */
+        max-width: 100%;
+      }
+      
+      .menu .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+      }
+      
+      .menu .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+      }
+      
+      .menu .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+      }
+      
+      .menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+      .menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0;
+      }
+      
+
+.atividades{
+    padding: 0;
+    margin: 0;
+}
+.atividades p{
+    padding: 0;
+    margin: 0;
+}
+
+  /***** BANNER - MOBILE *****/
+  .banner{
+      height: 100vh;
+  }
+  .swiper-slide.first{
+      display: flex;
+      flex-direction: column;
+      padding-top: 3rem;
+  }
+  .swiper-slide.first .textBanner{
+      width: 100%;
+      padding: 3rem .5rem 0 .5rem;
+      z-index: 1;
+  }
+  .swiper-slide.first img{
+      position: relative;
+      width: 100%;
+      height: 50%;
+      clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  /***** BANNER - MOBILE *****/
+  .welcome{
+      margin: 0;
+      flex-direction: column;
+  }
+  .welcome .welcomeText{
+      padding: 0 1rem;
+  }
+  .welcome .welcomeText p{
+   padding-bottom: 2.5rem;
+}
+
+ /***** ATIVIDADES - MOBILE *****/
+ .atividades{
+     text-align: left;
+ }
+ .atividades h1{
+     padding: 0 1rem;
+ }
+ .atividades p{
+     padding: 0 1rem 2.5rem 1rem;
+ }
+ .atividade1{
+     flex-direction: column-reverse;
+ }
+ .atividade1 .texto{
+     padding: 0 1rem;
+ }
+ .atividade1 .imagem{
+     height: 15rem;
+ }
+ .atividade2{
+    flex-direction: column;
+}
+.atividade2 .texto{
+    padding: 0 1rem;
+}
+.atividade2 .imagem{
+    height: 15rem;
+}
+.atividade3{
+    flex-direction: column-reverse;
+}
+.atividade3 .texto{
+    padding: 0 1rem;
+}
+.atividade3 .imagem{
+    height: 15rem;
+}
+
+/***** BENEFICIOS - MOBILE *****/
+.beneficios .contentorBeneficios{
+    flex-direction: column;
+}
+.beneficio2, .beneficio3{
+    margin-top: 3rem;
+}
+.beneficios .contentorBeneficios img{
+    width: 3rem;
+    height: 3rem;
+}
+/***** SEPARADOR - MOBILE *****/
+
+.separador h1{
+    font-size: 1.25rem;
+}
+
+/***** INSTUTORES - MOBILE *****/
+.instrutores .contentorCoach{
+    flex-direction: column;
+}
+.coach1, .coach2, .coach3{
+    margin: 1rem 0;
+}
+.clip{
+    display: none;
+}
+/***** REVIEWS - MOBILE *****/
+.swiper-container2 .swiper-slide .review{
+    padding: 3rem 2rem;
+}
+.swiper-container2 .swiper-slide .review p{
+    text-align: left;
+}
+
+/***** BLOG - MOBILE *****/
+
+.blog{
+    margin: 2rem 2rem;
+}
+.blog .artigos img{
+    width: 15rem;
+    height: 10rem;
+}
+.blog .artigos .box{
+    width: 17rem;
+    margin-right: 0;
+}
+
+.artigo1, .artigo2, .artigo3{
+    margin: 1rem 0;
+}
+.artigos{
+    flex-direction: column;
+}
+
+/***** FOOTER - MOBILE *****/
+footer{
+    padding: .5rem;
+}
+.seccoes{
+    flex-direction: column-reverse;
+}
+.seccao1{
+    padding: 2rem 1rem;
+}
+.seccao1 .socialmedia{
+    padding-right: 0;
+}
+.seccao2{
+    padding: 1rem;
+}
+
+.seccao2 .menu2{
+    display: none;
+}
+
+.seccao2 .newsletter #e-mail{
+    width: 75%;
+}
+}

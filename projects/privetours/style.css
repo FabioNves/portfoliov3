@@ -1,0 +1,948 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: 'archivo';
+    src: url('fonts/Archivo-Regular.ttf');
+}
+@font-face{
+    font-family: 'archivo-semibold';
+    src: url('fonts/Archivo-SemiBold.ttf');
+}
+@font-face{
+    font-family: 'archivo-italic';
+    src: url('fonts/Archivo-Italic.ttf');
+}
+
+:root{
+    --darkBlue: #183147;
+    --blue: #2F93EB;
+    --lightBlue: #E4EAF0;
+    --orange: #EBA22F;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'archivo';
+    color: var(--darkBlue);
+}
+
+h1, h2, h3, h4{
+    font-family: 'archivo-semibold';
+}
+
+
+/****** // NAV - START // ******/
+nav{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    height: 2rem;
+    padding: .5rem 5rem;
+    background-color: rgba(24,49,71,0.75);
+    color: var(--lightBlue);
+    border-bottom: .15rem solid var(--orange);
+    z-index: 3;
+}
+.logo a{
+    text-decoration: none;
+    color: var(--lightBlue);
+}
+a .bold{
+    font-family: 'archivo-semibold';
+}
+a .reg{
+    font-family: 'archivo';
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: 2rem;
+    font-size: .9rem;
+}
+nav ul li{
+    margin-left: 2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--lightBlue);
+    transition: .2s all ease-in-out;
+}
+nav ul li a:hover{
+    font-family: 'archivo-semibold';
+}
+
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    border-radius: .25rem;
+    transition: 0.4s;
+}
+.change .bar1{
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3{
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+.burger{
+    display: none;
+}
+/****** // NAV - END // ******/
+
+/****** // HEADER - START // ******/
+header{
+    width: 100vw;
+    height: 100vh;
+    background: url('img/lisboa-1.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    animation: zoom 2s; 
+}
+@keyframes zoom{
+    from {
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.bannerBox{
+    width: 50%;
+    align-items: center;
+    background-color: rgba(24,49,71,0.75);
+    padding: 2rem 1rem;
+    margin-left: -50rem;
+    animation: bannerBox 2s forwards;
+    animation-delay: 1.5s;
+}
+@keyframes bannerBox{
+    to{
+        margin-left: 0;
+    }
+}
+@keyframes slide-up{
+    0%{
+        opacity: 0;
+        transform: translate(0, 5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+.bannerBox .bannerText{
+    color: var(--lightBlue);
+    animation: slide-up 1.5s forwards;
+    animation-delay: 1.5s;
+}
+.bannerBox .bannerText p{
+    margin: 1rem 0;
+}
+.bannerBox .bannerBTN{
+    margin: 1.5rem 0 1rem 0;
+}
+.bannerBox .bannerBTN a{
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    text-decoration: none;
+    background: var(--orange);
+    color: var(--lightBlue);
+}
+.bannerBox .bannerBTN a:hover{
+    background: var(--lightBlue);
+    color: var(--darkBlue);
+    transition: .5s all ease-in-out;
+}
+/****** // HEADER - END // ******/
+
+/****** // WELCOME - START // ******/
+
+.welcome{
+    display: flex;
+    padding: 2rem 5rem;
+    background-color: var(--darkBlue);
+}
+.welcomeText{
+    flex: 1;
+    color: var(--lightBlue);
+    padding: 1rem;
+}
+.welcomeText p{
+    margin-top: 1.5rem;
+}
+/*** TABS - START ***/
+.tab-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.tab-row a{
+    width: 100%;
+    padding: 0;
+    text-decoration: none;
+}
+.tab-row a .blue-bar{
+    text-align: center;
+    padding: .3rem;
+    color: var(--lightBlue);
+    border-bottom: .2rem solid var(--blue);
+}
+.tab-row a .red-bar{
+    text-decoration: none;
+    color: var(--orange);
+    border-bottom: .2rem solid var(--orange);
+}
+
+.container{
+    background-color: var(--lightBlue);
+    padding: 2rem 1rem;
+}
+
+.container p{
+    margin: 0;
+    color: var(--darkBlue);
+}
+/*** TABS - END ***/
+.welcomeBTN{
+    margin: 2rem 0;
+}
+.welcomeBTN a{
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    text-decoration: none;
+    background: var(--orange);
+    color: var(--lightBlue);
+}
+.welcomeBTN a:hover{
+    background: var(--lightBlue);
+    color: var(--darkBlue);
+    transition: .5s all ease-in-out;
+}
+
+.welcomeImages{
+    flex: 1;
+}
+.welcomeImages img{
+    width: 25rem;
+}
+.welcomeImages .img1{
+    margin-right: 3rem;
+}
+.welcomeImages .img2{
+    margin-top: -2rem;
+    margin-left: 4rem;
+}
+/****** // WELCOME - END // ******/
+
+/****** // OUR TOURS - START // ******/
+.ourTours{
+    padding: 3rem 5rem;
+    text-align: center;
+}
+.ourTours .toursText{
+    padding: 0 15rem;
+}
+.ourTours .toursText span{
+    width: 15rem;
+    height: 1rem;
+    position: absolute;
+    margin-top: -1rem;
+    margin-left: -7.5rem;
+    background-color: var(--lightBlue);
+    z-index: -1;
+}
+.ourTours .toursText p{
+    margin: 2rem 0;
+}
+
+/*** TOUR CARDS - START ***/
+    .toursBox{
+        display: flex;
+    }
+    .tour{
+        flex: 1;
+        margin: 1.5rem;
+        background-color: var(--lightBlue);
+        border-radius: .25rem;
+        border-top-right-radius: 5rem;
+        padding: .5rem;
+    }
+
+    .tourImage{
+        width: 100%;
+        height: 15rem;
+        border-radius: .25rem;
+        overflow: hidden;
+        border-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: 5rem;
+    }
+    .tourImage img{
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: 5rem;
+        transition: transform .75s ease;
+    }
+    .tourImage:hover img{
+        transform: scale(1.5);
+    }
+    .tourImage .price{
+        width: 7.5rem;
+        margin-top: 0;
+        margin-left: 0;
+        padding: .5rem 1.5rem;
+        position: absolute;
+        background-color: rgba(24,49,71,0.75);
+        color: var(--lightBlue);
+        border-top-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+        z-index: 2;
+    }
+    .tourText{
+        padding: .5rem 1rem;
+        text-align: left;
+    }
+    .tourDetails{
+        display: flex;
+        margin: .5rem 0;
+    }
+    .tourText .tourDetails p{
+        padding: 0 1rem;
+    }
+    .tourText .tourDetails p:first-child{
+        padding-left: 0;
+       border-right: .15rem solid var(--orange);
+    }
+    .tourText p{
+        text-align: justify;
+    }
+
+    .tourBTN{
+        text-align: left;
+        margin: 1rem;
+    }
+    .tourBTN a{
+        padding: .5rem 1rem;
+        border-radius: .2rem;
+        text-decoration: none;
+        border: .1rem solid var(--orange);
+        color: var(--darkBlue);
+    }
+    .tourBTN a:hover{
+        background: var(--orange);
+        color: white;
+        transition: .5s all ease-in-out;
+    }
+
+/*** TOUR CARDS - END ***/
+/****** // OUR TOURS - END // ******/
+
+/****** // REVIEWS - START // ******/
+.reviews{
+    padding: 3rem 0 0 0; 
+    text-align: center;
+}
+
+.reviews span{
+    width: 15rem;
+    height: 1rem;
+    position: absolute;
+    margin-top: -1rem;
+    margin-left: -7.5rem;
+    background-color: var(--lightBlue);
+    z-index: -1;
+}
+
+.reviewsBox{
+    display: flex;
+    margin-top: 5rem;
+    background-color: var(--darkBlue);
+    padding: 0 5rem 2rem 5rem;
+}
+
+.reviewsBox .review{
+    text-align: left;
+    margin: 1rem;
+    margin-top: -2rem;
+    padding: 1rem;
+    background-color: var(--lightBlue);
+}
+.reviewsBox .review p{
+    font-family: 'archivo-italic';
+}
+
+.reviewsBox .review h5{
+    margin-top: 1rem;
+}
+
+.square{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    margin-top: 0;
+    margin-left: -2.25rem;
+    background-color: var(--orange);
+}
+.triangle{
+    width: 0;
+	height: 0;
+	border-left: .3rem solid transparent;
+	border-right: .4rem solid transparent;
+    border-bottom: 1.25rem solid var(--orange);
+    margin-top: -1rem;
+    margin-left: 0.08rem;
+    transform: rotate(10deg)
+}
+
+.square1{
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    margin-top: .7rem;
+    margin-left: .25rem;
+    background-color: white;
+}
+.triangle1{
+    width: 0;
+	height: 0;
+	border-left: .1rem solid transparent;
+	border-right: .1rem solid transparent;
+    border-bottom: .5rem solid white;
+    margin-top: -0.5rem;
+    margin-left: 0.06rem;
+    transform: rotate(10deg)
+}
+
+.square2{
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    margin-top: .7rem;
+    margin-left: 1rem;
+    background-color: white;
+}
+.triangle2{
+    width: 0;
+	height: 0;
+	border-left: .1rem solid transparent;
+	border-right: .1rem solid transparent;
+    border-bottom: .5rem solid white;
+    margin-top: -0.5rem;
+    margin-left: 0.06rem;
+    transform: rotate(10deg)
+}
+
+/****** // REVIEWS - END // ******/
+
+/****** // OUR CARS - START // ******/
+
+.ourCars{
+    display: flex;
+    background-color: var(--lightBlue);
+    padding: 2rem 5rem;
+}
+.carsImage{
+    padding: 1rem;
+    flex: 1;
+}
+.carsImage img{
+    width: 90%;
+}
+.carsText{
+    flex: 1;
+    padding: 1rem;
+}
+.carsText p{
+    margin: 1.5rem 0;
+}
+
+.carsBTN{
+    text-align: left;
+    margin: 1rem 0;
+}
+.carsBTN a{
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    text-decoration: none;
+    border: .1rem solid var(--orange);
+    color: var(--darkBlue);
+}
+.carsBTN a:hover{
+    background: var(--orange);
+    color: white;
+    transition: .5s all ease-in-out;
+}
+
+/****** // OUR CARS - END // ******/
+
+/****** // OUR BLOG - START // ******/
+
+.ourBlog{
+    padding: 3rem 5rem;
+}
+.ourBlogTitle{
+    text-align: center;
+    padding: 0 10rem;
+}
+
+.ourBlogTitle span{
+    width: 15rem;
+    height: 1rem;
+    position: absolute;
+    margin-top: -1rem;
+    margin-left: -7.5rem;
+    background-color: var(--lightBlue);
+    z-index: -1;
+}
+
+.ourBlogTitle p{
+    margin-top: 1.5rem;
+}
+
+.ourblogBox{
+    display: flex;
+}
+
+.article{
+    flex: 1;
+    margin: 2rem;
+    background-color: var(--lightBlue);
+    border-radius: .25rem;
+}
+.article .articleImage{
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.article .articleImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .25rem;
+    transition: transform .75s ease;
+}
+.article .articleImage:hover img{
+    transform: scale(1.5);
+}
+
+.article .articleImage .title{
+    width: 100%;
+    padding: .5rem;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(235,162,47,0.75);
+    z-index: 1;
+}
+.title a{
+    text-decoration: none;
+    color: white;
+}
+
+.article .articleText h5{
+    margin-bottom: .5rem;
+}
+.article .articleText{
+    padding: 1rem;
+}
+.article .articleText p{
+    text-align: justify;
+}
+
+.articleBTN{
+    text-align: left;
+    margin: 1rem;
+}
+.articleBTN a{
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    text-decoration: none;
+    border: .1rem solid var(--darkBlue);
+    color: var(--darkBlue);
+}
+.articleBTN a:hover{
+    background: var(--darkBlue);
+    
+    color: white;
+    transition: .5s all ease-in-out;
+}
+
+/****** // OUR BLOG - END // ******/
+
+/****** // CERTIFICATIONS - START // ******/
+.certification{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+.certification img{
+    width: 15rem;
+}
+
+/****** // CERTIFICATIONS - END // ******/
+
+/****** // FOOTER - START // ******/
+footer{
+    color: var(--lightBlue);
+    background-color: var(--darkBlue);
+    padding: 0 5rem;
+}
+footer h3{
+    color: var(--blue);
+    margin: 1rem 0;
+}
+.footerForm{
+    width: 100%;
+}
+.footerForm input{
+    width: 75%;
+    height: 1.5rem;
+}
+.footerForm input:hover{
+    border: none;
+}
+.footerForm button{
+    width: 20%;
+    height: 1.5rem;
+    padding: 0 .5rem;
+    margin-left: -.5rem;
+    background-color: var(--lightBlue);
+    border: none;
+    border-radius: .2rem;
+}
+.mainFooter{
+    display: flex;
+}
+.resume{
+    flex: 1;
+    padding: 1rem;
+}
+.resume p{
+    margin-right: 1rem;
+}
+.menu{
+    flex: 1;
+    padding: 1rem;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    margin: .2rem 0;
+   
+}
+.menu ul li a{
+    text-decoration: none;
+    color: var(--lightBlue);
+}
+.menu ul li a:hover{
+    border-bottom: .1rem solid var(--blue);
+}
+.contact{
+    flex: 1;
+    padding: 1rem;
+}
+
+.bottomFooter{
+    border-top: .2rem solid var(--orange);
+    text-align: center;
+    padding: .5rem;
+}
+.social{
+    display: flex;
+    justify-content: space-between;
+}
+.social img{
+    width: 2.5rem;
+    border-radius: .75rem;
+    cursor: pointer;
+}
+/****** // FOOTER - END // ******/
+
+@media only screen and (max-width: 1200px){
+    .welcome{
+        padding: 2rem;
+        align-items: center;
+    }
+    .welcomeImages img{
+        width: 20rem;
+    }
+    /****** // OUR TOURS - MOBILE - START // ******/
+.ourTours{
+    padding: 3rem 1rem;
+}
+.ourTours .toursText{
+    padding: 0 4rem;
+ }
+ .tour{
+    margin: .5rem;
+ }
+  /****** // CARS - MOBILE // ******/
+  .ourCars{
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+}
+.carsImage{
+    padding: 0;
+    flex: 1;
+}
+.carsImage img{
+    width: 100%;
+}
+ /****** // REVIEWS - MOBILE // ******/
+ .reviewsBox{
+    flex-direction: column;
+    padding: 0 5rem 1rem 15rem;
+}
+
+.reviewsBox .review{
+    margin: 4rem 0;
+    margin-top: -3rem;
+}
+/****** // OUR BLOG - MOBILE // ******/
+
+.ourBlog{
+    padding: 3rem 1rem;
+}
+.ourBlogTitle{
+    padding: 2rem 1rem;
+}
+
+.article{
+    margin: 1rem .5rem;
+}
+}
+
+@media only screen and (max-width: 900px){
+    nav{
+        padding: .5rem 2rem;
+        height: 3rem;
+    }
+    nav ul li{
+        margin-top: 0;
+        margin-left: 0;
+    }
+    nav .logo a{
+        line-height: 2rem;
+    }
+    .topnav a{
+        display: none;
+    }
+    .burger{
+        float: right;
+        display: block;
+    }
+    .topnav.responsive{
+        position: relative;
+    }
+    .topnav{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-top: 2.5rem;
+    }
+    .topnav.responsive{
+        width: 100%;
+        position: absolute;
+        margin-left: 0;
+        padding-left: 0;
+        left: 0;
+    }
+    .topnav.responsive li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: var(--darkBlue);
+        padding: 1rem 5rem 1rem 1rem;
+    }
+
+    .bannerBox{
+        width: 75%;
+    }
+
+ /****** // WELCOME - MOBILE - START // ******/
+ .welcome{
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+.welcomeImages{
+   text-align: center;
+}
+.welcomeImages img{
+    width: 20rem;
+}
+/****** // OUR TOURS - MOBILE - START // ******/
+.ourTours{
+    padding: 3rem 1rem;
+}
+.ourTours .toursText{
+   padding: 0 1rem;
+}
+.toursBox{
+   flex-direction: column;
+}
+.tour{
+   margin: .5rem;
+}
+ /****** // CARS - MOBILE // ******/
+ .ourCars{
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+}
+.carsImage{
+    padding: 0;
+    flex: 1;
+}
+.carsImage img{
+    width: 100%;
+}
+  /****** // REVIEWS - MOBILE // ******/
+  .reviewsBox{
+    flex-direction: column;
+    padding: 0 1rem 1rem 3rem;
+}
+
+.reviewsBox .review{
+    margin: 4rem 0;
+    margin-top: -3rem;
+}
+
+  /****** // OUR BLOG - MOBILE // ******/
+
+.ourBlog{
+    padding: 3rem 1rem;
+}
+.ourBlogTitle{
+    padding: 0 1rem;
+}
+
+  .ourblogBox{
+    flex-direction: column;
+}
+.article{
+    margin: 1rem .5rem;
+}
+
+ /****** // FOOTER - MOBILE // ******/
+ footer{
+     padding: 0 2.5rem;
+ }
+ .mainFooter{
+    flex-direction: column;
+}
+.footerForm{
+    padding: 0 3rem;
+}
+.social{
+    justify-content: space-around;
+}
+}
+
+/****** // MOBILE - 600PX - START // ******/
+
+@media only screen and (max-width: 600px){
+
+    
+
+    /****** // WELCOME - MOBILE - START // ******/
+    .welcome{
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    .welcomeImages img{
+        width: 12.5rem;
+    }
+
+     /****** // OUR TOURS - MOBILE - START // ******/
+     .ourTours{
+         padding: 3rem 1rem;
+     }
+     .ourTours .toursText{
+        padding: 0 1rem;
+    }
+     .toursBox{
+        flex-direction: column;
+    }
+    .tour{
+        margin: .5rem;
+    }
+    /****** // OUR TOURS - MOBILE - END // ******/
+
+     /****** // CARS - MOBILE // ******/
+     .ourCars{
+        flex-direction: column-reverse;
+        padding: 2rem 1rem;
+    }
+    .carsImage{
+        padding: 0;
+        flex: 1;
+    }
+    .carsImage img{
+        width: 100%;
+    }
+
+      /****** // REVIEWS - MOBILE // ******/
+      .reviewsBox{
+        flex-direction: column;
+        padding: 0 1rem 1rem 2rem;
+    }
+    
+    .reviewsBox .review{
+        margin: 4rem 0;
+        margin-top: -3rem;
+    }
+
+      /****** // OUR BLOG - MOBILE // ******/
+
+    .ourBlog{
+        padding: 3rem 1rem;
+    }
+    .ourBlogTitle{
+        padding: 0 1rem;
+    }
+
+      .ourblogBox{
+        flex-direction: column;
+    }
+    .article{
+        margin: 1rem .5rem;
+    }
+
+     /****** // FOOTER - MOBILE // ******/
+     footer{
+        padding: 0 1rem;
+    }
+     .footerForm{
+        padding: 0;
+    }
+    
+}
+
+/****** // MOBILE - 600PX - END // ******/
+
+/****** // EXAMPLE - START // ******/
+
+/****** // EXAMPLE - END // ******/

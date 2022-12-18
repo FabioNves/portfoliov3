@@ -1,0 +1,93 @@
+.articleBox{
+    padding: 5rem 5rem 1rem 5rem;
+}
+.articleBox h1{
+    text-align: center;
+    padding: 3rem 15rem;
+}
+.contentorArticle{
+    display: flex;
+}
+.back{
+    text-decoration: none;
+    color: #003366;
+    transition: .2s all ease-out;
+}
+.back:hover{
+    font-weight: 600;
+}
+/*** Main articles ***/
+.mainArticle{
+    flex: 3;
+    padding: 3rem;
+}
+
+.mainArticle{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+.mainArticle img{
+    width: 100%;
+}
+.mainArticle h1{
+    text-align: left;
+    padding: 1rem 0;
+}
+.mainArticle p{
+    margin: 1rem 0;
+}
+.mainArticle .metabox{
+    padding-bottom: .3rem; 
+    border-bottom: .2rem solid var(--blue);
+}
+.mainArticle .metabox a{
+    color: var(--darkBlue);
+    text-decoration: none;
+    font-weight: 500;
+}
+.mainArticle .metabox a:first-child:hover{
+    color: var(--orange);
+}
+.mainArticle .metabox a:last-child:hover{
+    color: var(--green);
+}
+
+/*** Aside ***/
+.aside{
+    flex: 1;
+    padding: 1rem;
+}
+.aside .article{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightBlue);
+    border-radius: .2rem;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+.aside .article img{
+    width: 100%;
+}
+.aside .article h3{
+    padding: 1rem 0;
+}
+.aside .article .btn{
+    text-align: right;
+    padding-top: 2rem;
+}
+.aside .article .btn a{
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: #003366;
+    border: .1rem solid #003366;
+    border-radius: .2rem;
+    transition: 0.2s ease-in-out;
+}
+.aside .article .btn a:hover{
+    color: white;
+    background-color: #003366;
+    border: .1rem solid #003366;
+    transition: 0.2s ease-in-out;
+}

@@ -1,0 +1,758 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    color: var(--blak);
+    font-size: 16px;
+}
+
+:root{
+    --light-blue: #89f7fe;
+    --blue: #66a6ff;
+    --blak: #161925;
+    --white: #f3eaf4;
+    --orange: #f19a3e;
+}
+
+@font-face{
+    font-family: 'SuiGeneris';
+    src: url('fonts/sui.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'SuiGeneris-light';
+    src: url('fonts/sui-light.otf');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SuiGenerisLt-Regular';
+    src: url('fonts/SuiGenerisLt-Regular/font.woff2') format('woff2'), url('webFonts/SuiGenerisLt-Regular/font.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'SuiGenerisOl-Regular';
+    src: url('fonts/SuiGenerisOl-Regular/font.woff2') format('woff2'), url('webFonts/SuiGenerisOl-Regular/font.woff') format('woff');
+  }
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: 'SuiGenerisLt-Regular';
+    background-color: var(--white);
+    scroll-behavior: smooth;
+   transition: 1s ease-in-out;
+}
+h1{ 
+    text-transform: uppercase;
+    font-family: 'SuiGeneris';
+    font-weight: normal;
+    font-size: 2.441rem;
+    letter-spacing: .2rem;
+}
+h2{
+    font-size: 1.953rem;
+}
+h3{
+    font-size: 1.563rem;
+}
+p{
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+img{
+    width: 5rem;
+}
+
+.navbar{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -3rem;
+    width: 100%;
+    height: 3rem;
+    padding: 0 5rem;
+    background-color: var(--white);
+    z-index: 2;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.025);
+}
+.hide{
+    transition: .5s ease-in-out;
+    margin-top: 0;
+}
+.main-nav{
+    display: flex;
+}
+.navbar ul li{
+    list-style: none;
+    padding: 0 2rem;
+}
+.navbar ul li a{
+    color: var(--blue);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    transition: .2s ease-in-out;
+}
+.navbar ul li a:hover{
+    border-radius: .5rem;
+    color: var(--white);
+    background-color: rgba(102, 166, 255, 0.6);
+    transition: .3s ease-in-out;
+}
+.logo a img{
+    width: 15rem;
+}
+.burger{
+    display: none;
+}
+/******************** START -  BANNER ********************/
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/w2.png');
+    background-size: cover;
+}
+.containerBg{
+    width: 100vw;
+    height: 160vh;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+.header-bg{
+    width: 100%;
+    height: 105%;
+    position: absolute;
+    clip-path: polygon(100% 0, 100% 80%, 79% 88%, 0 80%, 0 0);
+    background: linear-gradient(rgba(137,247,254,0.25) 0%,rgba(102,166,255,0.5) 50%, rgba(102,166,255,1) 75%, rgba(102,166,255,1) 100%);
+}
+.intro{
+    text-align: center;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+    z-index: 2;
+    animation: fade-in ease 1s;
+}
+.language{
+    display: flex;
+    justify-content: center;
+}
+.language a{
+    padding: 0 1rem;
+    text-decoration: none;
+    font-family: 'SuiGenerisOl-Regular';
+    color: var(--white);
+    font-size: 1.953rem;
+}
+.language a.on{
+    font-family: 'SuiGeneris';
+}
+.language a:hover{
+    font-family: 'SuiGeneris';
+    transition: 1.5s ease-in-out;
+}
+.presentation{
+    animation: fade-in ease 2s;
+}
+.presentation h1{
+    color: var(--white);
+    font-family: 'SuiGeneris';
+    padding: 1rem 0;
+    text-transform: none;
+}
+.presentation h2{
+    color: var(--white);
+    font-family: 'SuiGenerisLt-Regular';
+}
+.presentation h3{
+    padding: 1rem 0;
+    color: var(--white);
+    font-family: 'SuiGeneris-light';
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.logo{
+    text-align: center;
+    z-index: 2;
+}
+.logo img{
+    width: 75%;
+}
+.btn{
+    z-index: 2;
+    animation: fade-in ease 2s;
+}
+.btn a{
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: .1rem solid var(--white);
+    border-radius: 1rem;
+    transition: .2s ease-in-out;
+}
+.btn a:hover{
+    color: var(--blue);
+    background-color: var(--white);
+}
+/******************** END -  BANNER ********************/
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 10rem;
+    text-align: center;
+}
+/********************************************** START TRIANGLES **********************************************/
+
+.triangle{
+    position: relative;
+}
+.triangle span{
+    position: absolute;
+    z-index: -1;
+    margin-top: 2rem;
+    width: 0;
+      height: 0;
+      animation: animate 10s ease-in-out infinite;
+      -webkit-animation: animate 10s ease-in-out infinite;
+      -moz-animation: animate 10s ease-in-out infinite;
+      -o-animation: animate 10s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%{
+        border-top: 5rem solid transparent;
+      border-left: 10rem solid rgba(241, 174, 107, 0.8);
+      border-bottom: 18rem solid transparent;
+    }
+    33%{
+        border-top: -2rem solid transparent;
+        border-left: 13rem solid rgba(241, 174, 107, 0.8);
+        border-bottom: 20rem solid transparent;
+    }
+    66%{
+        border-top: 5rem solid transparent;
+      border-left: 10rem solid rgba(241, 174, 107, 0.8);
+      border-bottom: 30rem solid transparent;
+    }
+    100%{
+        border-top: 5rem solid transparent;
+      border-left: 10rem solid rgba(241, 174, 107, 0.8);
+      border-bottom: 18rem solid transparent;
+    }
+}
+.outer_triangle {
+    display: inline-block;
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background: rgba(241, 174, 107, 0.8);
+    box-sizing: border-box;
+    clip-path: polygon(0 0, 0% 100%, 65% 82%);
+    z-index: -3;
+    animation: animateBorder 10s ease-in-out infinite;
+    -webkit-animation: animateBorder 10s ease-in-out infinite;
+    -moz-animation: animateBorder 10s ease-in-out infinite;
+    -o-animation: animateBorder 10s ease-in-out infinite;
+}
+  .inner_triangle{
+    position: absolute;
+    background: var(--white);
+    top: 2px; /* equal to border thickness */
+    left: -2px; /* equal to border thickness */
+    width: 19.9rem; /* container height - (border thickness * 2) */
+    height: 19.8rem; /* container height - (border thickness * 2) */
+    clip-path: polygon(0 0, 0% 100%, 65% 82%);
+    z-index: -3;
+    animation: animateBorder 10s ease-in-out infinite;
+    -webkit-animation: animateBorder 10s ease-in-out infinite;
+    -moz-animation: animateBorder 10s ease-in-out infinite;
+    -o-animation: animateBorder 10s ease-in-out infinite;
+}
+
+@keyframes animateBorder{
+    0%{
+        clip-path: polygon(0 0, 0% 100%, 65% 82%);
+    }
+    33%{
+        clip-path: polygon(0 0, 0% 100%, 83% 63%);
+    }
+    66%{
+        clip-path: polygon(0 0, 0% 100%, 37% 14%);
+    }
+    100%{
+        clip-path: polygon(0 0, 0% 100%, 65% 82%);
+    }
+}
+.triangle3{
+    position: relative;
+}
+.triangle3 span{
+    position: absolute;
+    z-index: -1;
+    margin-top: -30rem;
+    width: 0;
+      height: 0;
+      animation: animate 10s ease-in-out infinite;
+      -webkit-animation: animate 10s ease-in-out infinite;
+      -moz-animation: animate 10s ease-in-out infinite;
+      -o-animation: animate 10s ease-in-out infinite;
+}
+
+
+.triangle2{
+    position: relative;
+    
+}
+.triangle2 span{
+    position: absolute;
+    z-index: -1;
+    margin-top: -1rem;
+    right: 0;
+    width: 0;
+      height: 0;
+      animation: animate2 10s ease-in-out infinite;
+      -webkit-animation: animate2 10s ease-in-out infinite;
+      -moz-animation: animate2 10s ease-in-out infinite;
+      -o-animation: animate2 10s ease-in-out infinite;
+}
+
+@keyframes animate2{
+    0%{
+        border-top: 5rem solid transparent;
+      border-right: 10rem solid rgba(102, 166, 255, 0.6);
+      border-bottom: 18rem solid transparent;
+    }
+    33%{
+        border-top: -2rem solid transparent;
+        border-right: 13rem solid rgba(102, 166, 255, 0.6);
+        border-bottom: 20rem solid transparent;
+    }
+    66%{
+        border-top: 5rem solid transparent;
+      border-right: 10rem solid rgba(102, 166, 255, 0.6);
+      border-bottom: 30rem solid transparent;
+    }
+    100%{
+        border-top: 5rem solid transparent;
+      border-right: 10rem solid rgba(102, 166, 255, 0.6);
+      border-bottom: 18rem solid transparent;
+    }
+}
+/********************************************** END TRIANGLES **********************************************/
+
+
+/******************** START -  ABOUT ********************/
+.container .about{
+    padding-top: 10rem;
+}
+.container .about p{
+    padding: 2rem 5rem;
+}
+.sectionTitle p{
+    padding: 2rem 5rem;
+}
+.containerBox{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+.box{
+    margin: 1rem;
+    padding: .5rem;
+    border: .1rem solid var(--blue);
+    border-radius: .2rem;
+}
+.box .titleBox{
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--blue);
+    border-radius: .2rem;
+}
+.box .titleBox h3{
+    font-family: 'SuiGeneris';
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+.box .textBox{
+    padding: 1rem;
+}
+/******************** END -  ABOUT ********************/
+.slider{
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+.slider p{
+    width: 750%;
+    font-size: 3.052rem;
+    line-height: 4rem;
+    font-family: 'SuiGenerisOl-Regular';
+    color: var(--blue);
+    transition: 2s;
+    animation: moveSlider 50s linear infinite;
+}
+
+
+@keyframes moveSlider{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-66%);
+    }
+}
+
+/******************** START -  PROJECT ********************/
+.sectionTitle{
+    padding: 2rem 0;
+}
+.project{
+    margin: 2.5rem 0;
+    padding: 1rem;
+    background-color: var(--orange);
+    border-radius: 1rem;
+}
+.project2{
+    margin: 2.5rem 0;
+    padding: 1rem;
+    background-color: var(--blue);
+    border-radius: 1rem;
+}
+.project .data{
+    text-align: right;
+}
+.project2 .data{
+    text-align: left;
+}
+.projectBox{
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+.projectText{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.projectText h2{
+    font-size: 1.75rem;
+    color: var(--blak);
+    font-family: 'SuiGeneris';
+    text-transform: uppercase;
+    margin: 1rem 0;
+    letter-spacing: .2rem;
+}
+.tech ul{
+    display: flex;
+    justify-content: space-around;
+}
+.tech ul li{
+    font-size: 1.5rem;
+    font-family: 'SuiGenerisOl-Regular';
+    color: var(--white);
+    list-style: none;
+    padding: .25rem 1rem;
+    border-radius: .2rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+}
+.project2 .projectText ul li{
+    font-size: .75rem;
+    color: var(--blue);
+    list-style: none;
+    background-color: var(--white);
+    padding: .25rem 1rem;
+    border-radius: .2rem;
+}
+.projectText p{
+    margin: 1rem 0;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+.btns a{
+    text-decoration: none;
+    padding: .25rem 1.5rem;
+    border: .1rem solid var(--blak);
+    border-radius: .2rem;
+}
+.btns a:hover{
+    color: var(--white);
+    background-color: var(--blak);
+}
+.projectImage{
+    flex: 1;
+}
+.projectImage img{
+    width: 100%;
+}
+/******************** END -  PROJECT ********************/
+
+/******************** START -  FOOTER ********************/
+footer{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    padding-top: 5rem;
+}
+.footer-bg{
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    left: -.5rem;
+    bottom: -5rem;
+    background-color: var(--blue);
+    transform: skew(5deg, -5deg);
+    border-radius: 5rem;
+    border-bottom-right-radius: 0;
+    z-index: -1;
+
+}
+.title{
+    padding: 2rem 0;
+}
+.socialMedia{
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+   padding: 0 20rem;
+}
+.socialMedia img{
+    width: 2rem;
+    transition: all .5s;
+}
+.socialMedia img:hover{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+.endText{
+    padding: 2rem 0 1rem 0;
+}
+/******************** END -  FOOTER ********************/
+
+/******************** START - TABLET ********************/
+
+@media only screen and (max-width: 1050px){
+   .container{
+       margin: 0 5rem;
+   }
+   .containerBg{
+    height: 150vh;
+}
+.header-bg{
+    clip-path: polygon(100% 0, 100% 80%, 79% 85%, 0 80%, 0 0);
+}
+   .slider{
+       padding: 2rem 0;
+   }
+   .slider p{
+    width: 1000%;
+   }
+   .tech ul{
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+}
+@media only screen and (max-width: 800px){
+        .main-nav{
+            display: none;
+            justify-content: space-around;
+            padding-left: 1rem;
+        }
+        .main-nav li{
+            text-align: center;
+            margin: 2rem auto;
+        }
+    .burger{
+        display: block;
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        margin-top: 2rem;
+    }
+     .active{
+        display: block;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 0;
+        margin-top: 3rem;
+        text-align: center;
+        background: var(--white);
+    }
+    .container{
+        margin: 0 5rem;
+    }
+    .container .about p{
+        padding: 2rem 0;
+    }
+    .sectionTitle p{
+        padding: 2rem 0;
+    }
+    .containerBox{
+        flex-direction: column;
+    }
+    .slider{
+        padding: 2rem 0;
+    }
+    .slider p{
+     width: 1500%;
+    }
+    /**** PROJECT ****/
+    .tech ul{
+        flex-wrap: wrap;
+    }
+    .tech ul li{
+        font-size: 1.25rem;
+        padding: .25rem .1rem;
+        letter-spacing: .1rem;
+    }
+    .project .projectBox{
+        flex-direction: column-reverse;
+    }
+    .project2 .projectBox{
+        flex-direction: column;
+    }
+    .socialMedia{
+        padding: 0 5rem;
+     }
+     .socialMedia img{
+        width: 3rem;
+    }
+    footer{
+        padding-top: 7rem;
+    }
+    .footer-bg{
+        left: -1rem;
+        width: 110%;
+        bottom: -4rem;
+        transform: skew(190deg, -5deg);
+    }
+ }
+/******************** END -  TABLET ********************/
+
+/******************** START - MOBILE ********************/
+@media only screen and (max-width: 570px){
+    h1{
+        font-size: 1.75rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    .navbar{
+        padding: 0 3rem;
+    }
+    .logo a img{
+        width: 10rem;
+    }
+    .intro{
+        text-align: left;
+        padding: 0 1rem;
+        padding-bottom: 3rem;
+    }
+    .language{
+        width: 100%;
+        justify-content: left;
+    }
+    .language a{
+        padding: 0 .5rem;
+    }
+    .btn a{
+        font-size: 0.8rem;
+    }
+    .container{
+        margin: 0 2rem;
+        text-align: left;
+    }
+    
+    .container .about p{
+        padding: 2rem 0;
+    }
+    .sectionTitle p{
+        padding: 2rem 0;
+    }
+    .containerBox{
+        flex-direction: column;
+    }
+    /**** PROJECT ****/
+    .tech ul{
+        flex-wrap: wrap;
+    }
+    .tech ul li{
+        font-size: 1rem;
+        padding: .25rem .1rem;
+        letter-spacing: .1rem;
+    }
+    .projectText h2{
+        font-size: 1.5rem;
+    }
+    .projectText ul{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .projectText ul li{
+        margin: .2rem 0;
+    }
+    .slider{
+        padding: 2rem 0;
+    }
+    .slider p{
+     width: 2500%;
+    }
+    .project .projectBox{
+        flex-direction: column-reverse;
+    }
+    .project2 .projectBox{
+        flex-direction: column;
+    }
+    .socialMedia{
+        padding: 0;
+     }
+     .socialMedia img{
+        width: 3rem;
+    }
+    footer{
+        padding-top: 7rem;
+    }
+    .footer-bg{
+        width: 110%;
+        height: 105%;
+        left: -1rem;
+        bottom: -5rem;
+        transform: skew(5deg, -12deg);
+    }
+ }
+ 
+/******************** END -  MOBILE ********************/
